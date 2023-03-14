@@ -1,0 +1,171 @@
+ion-header {
+    ion-toolbar {
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: "mon-bold";
+        }
+
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+
+        .broser {
+            margin-right: 13px;
+        }
+    }
+}
+
+.code-div {
+    border-radius: 5px;
+}
+
+.country-codeSelect {
+    background-color: var(--input-color);
+    border-radius: 5px;
+}
+
+.profile_div {
+    padding: 20px;
+    height: 102px;
+    box-shadow: 0px 0px 7px 1px #cccccc;
+
+    ion-item {
+        --inner-padding-end: 0px !important;
+        --padding-end: 0px !important;
+
+        .img {
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .daatName {
+            margin-right: 10px;
+        }
+
+        ion-text {
+            font-size: 16px;
+            font-family: "mon-bold";
+        }
+
+        ion-button {
+            margin: 0px;
+        }
+    }
+
+    .btn {
+        height: 30px;
+    }
+}
+
+h1 {
+    margin: 0;
+    margin-top: 18px;
+    font-size: 20px;
+    font-family: "mon-semibold";
+    margin-left: 6px;
+}
+
+.input-div {
+    p {
+        margin: 0px;
+        font-size: 12px;
+        font-family: "mon-medium";
+        color: var(--input-text-color);
+        margin-left: 24px;
+        margin-top: 13px;
+    }
+
+    ion-input {
+        --background: var(--input-color);
+        border-radius: 7px;
+        margin-top: 4px;
+        --padding-start: 16px;
+        --color: var(--black-color);
+        font-size: 15px;
+        width: 100%;
+        font-family: "mon-medium";
+    }
+}
+
+hr {
+    border: 1px dashed #eeeeee;
+    width: 100%;
+    margin-top: -5px;
+    box-sizing: none;
+}
+
+.margin-top {
+    margin-top: 25px;
+}
+
+.margin-bottom {
+    margin-bottom: 25px;
+}
+
+.add-location {
+    font-size: 13px;
+    color: var(--blue-color);
+    font-family: "mon-medium";
+    margin-top: 3px;
+    margin-left: 11px;
+}
+
+.addresss {
+    margin: 0px;
+    font-size: 16px;
+    font-family: "mon-medium";
+}
+
+.address_div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trash {
+    font-size: 20px;
+    font-family: "mon-regular";
+    color: var(--google-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pencil {
+    font-size: 20px;
+    color: var(--blue-color);
+    font-family: "mon-regular";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+.locat {
+    font-size: 12px;
+    color: var(--input-text-color);
+}
+
+.change {
+    height: 44px;
+    background-color: var(--blue-color);
+    font-size: 15px;
+    font-family: "mon-medium";
+    overflow: hidden;
+    text-transform: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.err {
+    font-size: 12px;
+    color: var(--google-color);
+    font-family: "mon-medium";
+}

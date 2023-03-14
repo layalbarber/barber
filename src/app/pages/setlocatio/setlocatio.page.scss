@@ -1,0 +1,111 @@
+ion-header {
+    ion-toolbar {
+        --padding-start: 10px;
+        --padding-end: 10px;
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-bold;
+        }
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+    }
+    input {
+        border: none;
+        outline: none;
+        width: 100%;
+        text-decoration: none;
+        background-color: var(--input-color);
+        padding-left: 17px;
+        padding-right: 15px;
+        margin-top: -4px;
+        font-family: mon-medium;
+    }
+    input:hover {
+        border: none;
+    }
+    .addresscol {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+    }
+    ion-item {
+        --inner-padding-end: 8px;
+        --background: var(--input-color);
+        border-radius: 10px;
+        width: 94%;
+        height: 40px;
+        ion-input {
+            --padding-start: 20px;
+            --padding-top: 2px !important;
+            font-size: 15px;
+            font-family: mon-medium;
+        }
+        ion-icon {
+            font-size: 20px;
+            color: var(--input-text-color);
+        }
+    }
+    img {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+    }
+}
+
+#map {
+    margin-top: 14px;
+}
+
+.icon {
+    font-size: 26px;
+    margin-top: 5px;
+}
+
+ion-content {
+    .popular_div {
+        margin-bottom: 30px;
+        p {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-medium;
+            margin-top: 16px;
+            margin-bottom: 18px;
+        }
+        h1 {
+            margin-top: 0px;
+            font-size: 20px;
+            font-family: mon-bold;
+        }
+    }
+    .search_result {
+        font-size: 13px;
+        color: var(--input-text-color);
+        font-family: mon-medium;
+        margin-bottom: 24px;
+    }
+    .result {
+        img {
+            margin-right: 11px;
+        }
+        p {
+            font-size: 16px;
+            color: var(--black-color);
+            font-family: mon-medium;
+            span {
+                font-size: 12px;
+                color: var(--input-text-color);
+            }
+            margin-bottom: 4px;
+            margin-top: 2px;
+        }
+        h4 {
+            margin-top: 0px !important;
+            font-size: 12px;
+            font-family: mon-medium;
+            color: var(--input-text-color);
+            margin-left: 34px;
+        }
+    }
+}

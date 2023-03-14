@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button mode="md" defaultHref="" text="" icon="chevron-back" (click)="back()"></ion-back-button>
+        </ion-buttons>
+        <ion-title header-title>{{'selectTime.title' | translate}}</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <div class="calendar-section">
+        <h5>
+            <ion-icon name="chevron-back-outline" (click)="action(1)"></ion-icon>{{calender.date[0]?.date| date:'LLL'}}
+            {{calender.date[0]?.date| date:'yyyy'}}
+            <ion-icon (click)="action(2)" name="chevron-forward-outline">
+            </ion-icon>
+        </h5>
+        <div class="cn_div">
+            <table *ngFor='let i of calender.date | slice:slice.from:slice.to; let j=index'>
+                <tr>
+                    <th>{{i?.date| date:'EEEEEE'}}</th>
+                </tr>
+                <tr [class.disabled]="!i.selected">
+                    <td (click)="selected = i?.date;request()">
+                        <div [class.active]="selected == i?.date">{{i?.date | date:'d'}}</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="ion-padding-horizontal">
+        <div *ngIf="success == true">
+            <h5 class="info-title">{{'selectTime.time' | translate}}</h5>
+            <ion-row>
+                <ion-col size="3" *ngFor="let slot of time" class="ion-no-padding">
+                    <div class="time-slot" [ngClass]="selectBtn == slot.start_time ? 'active' : 'segment_btn'"
+                        (click)="activeSlot(slot.start_time)">
+                        {{slot.start_time}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div *ngIf="success == false" class="salon-closed">
+            <img src="../../../assets/salon is closed.png">
+        </div>
+        <div *ngIf="data.length > 0">
+            <h5 class="info-title" *ngIf="data.length > 0">{{'selectTime.employe' | translate}}</h5>
+            <div class="check">
+                <div>
+                    <ion-row *ngFor="let item of data;let i = index" (click)="verifyEvent(item.emp_id)">
+                        <ion-col size="1">
+                            <ion-checkbox [checked]="item.isItemChecked == true"></ion-checkbox>
+                        </ion-col>
+                        <ion-col size="11">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <img style="border-radius: 20px;" src="{{item.imagePath + item.image}}" height="35px"
+                                    width="35px">
+                                <ion-text>{{item.name}}</ion-text>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <ion-button mode="md" *ngIf="success == true" class="ion-no-margin btn-general btnt" color="white"
+            (click)="nextPage()">
+            {{'selectTime.continue' | translate}}
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>

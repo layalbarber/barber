@@ -1,0 +1,357 @@
+{
+    "login": {
+        "forgotPassword": "forgot your password ?",
+        "login": "Login",
+        "signUp": "Don't have an account?",
+        "new": "Signup"
+    },
+    "home": {
+        "title": "Home",
+        "location": "Select Your Location",
+        "AllSalon": "All Salons",
+        "book": "Book",
+        "category": "All Categories",
+        "near": "Near By Your Location"
+    },
+    "addReview": {
+        "share": "Share Your Experience",
+        "how": "How Many Stars You Will Give",
+        "shareRe": "Share Review",
+        "service": "Add Review"
+    },
+    "cancel": {
+        "cancelApo": "Cancel Appointment!",
+        "sure": "Are you sure",
+        "canApoIn": "you want to cancel your appointment?",
+        "no": "No",
+        "Yes": "Yes"
+    },
+    "offer": {
+        "title": "Offers",
+        "coming": "Is Coming Soon",
+        "Apply": "Apply"
+    },
+    "SelectLanguage": {
+        "label": "Select Language",
+        "english": "English",
+        "arabic": "Arabic",
+        "romanian": "Romanian",
+        "Cancel": "Cancel",
+        "ok": "Ok"
+    },
+    "payment-modal": {
+        "successMesasge": "Your appointment booking is successfully.",
+        "canSee": "You can see your upcoming appointment in APPOINTMENT section",
+        "dot": "Go there"
+    },
+    "SaveLocation": {
+        "title": "Save Location",
+        "save": "Do you want to save this location",
+        "forFutur": "for future ? ",
+        "No": "No",
+        "Yes": "Yes"
+    },
+    "social": {
+        "share": "Share With Your Friends",
+        "Whatsapp": "WhatsApp",
+        "facebook": "facebook",
+        "Gmail": "Gmail",
+        "Instagram": "Instagram"
+    },
+    "SortBy": {
+        "sort": "Sort By",
+        "look": "Looking For",
+        "Categories": "Categories",
+        "Cancel": "Cancel",
+        "Apply": "Apply"
+    },
+    "About": {
+        "title": "About App"
+    },
+    "addAddress": {
+        "title": "Address",
+        "Save": "Save"
+    },
+    "AllSalons": {
+        "title": "All Salons",
+        "Book": "Book"
+    },
+    "Appointment": {
+        "title": "Appointment",
+        "Upcoming": "Upcoming",
+        "Completed": "Completed",
+        "viewdetail": "View",
+        "Canceled": "Canceled",
+        "Rating": "Rating",
+        "ServiceType": "Service Type",
+        "CancelBooking": "Cancel Booking",
+        "Seeall": "Show More",
+        "showless": "Show Less",
+        "reviewAdd": "+ Add Your Review"
+    },
+    "confirm": {
+        "title": "Destination Direction",
+        "destination": "Your Destination",
+        "km": "km"
+    },
+    "editProfile": {
+        "title": "Edit Profile",
+        "personal": "Personal Info",
+        "name": "Edit Your Name",
+        "email": "Edit Your EmailId",
+        "contactNmber": "Edit Your Contact Number",
+        "Location": "Manage Your Location",
+        "addlocation": "+ Add New Location",
+        "Remove": "Remove",
+        "Change": "Save"
+    },
+    "emailVerify": {
+        "user": "Verify User",
+        "email": "Email Verification!",
+        "worry": "Don't worry, we will find your account",
+        "EmailID": "Email ID",
+        "next": "Next",
+        "check": "Please check your email",
+        "send": "we will send you one OTP on your mail."
+    },
+    "forgot": {
+        "VerifyUser": "Verify User",
+        "VerifyHere": "Verify Here!",
+        "find": "Don't worry, we will find your account",
+        "EmailID": "Email ID",
+        "otp": "Send me OTP",
+        "email": "Please check your email",
+        "send": "we will send you one OTP on your mail.",
+        "emailPlace": "Enter your email here"
+    },
+    "BookAppointment": {
+        "extracharge": "extra charges",
+        "book": "Book Appointment",
+        "confirm": "Confirmation Your Booking",
+        "selected": "Service You Selected",
+        "discount": "Discount",
+        "total": "Total",
+        "coupon": "You have a coupon to use",
+        "Clickhere": "Click here",
+        "payment": "Select Payment Method",
+        "CashPay": "Cash Pay",
+        "make": "Make Payment"
+    },
+    "SingleAppointment": {
+        "extracharge": "extra charges",
+        "book": "Appointment Details",
+        "selected": "Service You Selected",
+        "discount": "Discount",
+        "total": "Total",
+        "Rating": "Rating",
+        "Loyaltypoint": "Loyalty point",
+        "Points you earned": "Points you earned ",
+        "Pending": "Pending",
+        "Completed": "Completed",
+        "Approved": "Approved",
+        "Cancel": "Cancel"
+    },
+    "NearBy": {
+        "near": "Near By You",
+        "Book": "Book"
+    },
+    "appoinement": {
+        "Appointment": "Appointment",
+        "you": "You haven't any appointment set",
+        "home": "Go To Home"
+    },
+    "notification": {
+        "title": "Notification"
+    },
+    "offers": {
+        "Offers": "Offers"
+    },
+    "passwordChanged": {
+        "message1": "Congratulation!",
+        "message2": "Your password has been send your email....!",
+        "login": "Go To Login"
+    },
+    "privacy": {
+        "title": "Privacy Policy"
+    },
+    "profile": {
+        "title": "Profile",
+        "personalInfo": "Personal Info",
+        "pointInfo": "Loyalty point",
+        "Total_points": "Total earned points",
+        "Remain_points": "Remaining points",
+        "referral_code": "Referral code",
+        "name": "Edit Your Name",
+        "email": "Edit Your Email Id",
+        "contact": "Edit Your Contact Number",
+        "changeLable": "Change Password",
+        "oldLabel": "Old Password",
+        "notCorrect": "Old Password is not correct",
+        "newPassword": "New Password",
+        "ConfirmPassword": "Confirm Password",
+        "ChangePassword": "Change Password",
+        "Earn": "Earn",
+        "referral_content": "Points by sharing referral code with your friend."
+    },
+    "salonProfile": {
+        "Rating": "Rating",
+        "About": "About",
+        "ServiceonDays": "Service on Days",
+        "Closed": "Closed",
+        "Sunday": "Sunday",
+        "Monday": "Monday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday",
+        "Thursday": "Thursday",
+        "Friday": "Friday",
+        "Saturday": "Saturday",
+        "see": "See the direction",
+        "contac": "Contact Information",
+        "websi": "Website",
+        "visit": "Visit the website",
+        "call": "Call",
+        "bookService": "Book Service",
+        "review": "Review",
+        "totalReview": "Total Review",
+        "total": "Total",
+        "open": "OPEN",
+        "close": "CLOSE"
+    },
+    "selectTime": {
+        "title": "Select Time",
+        "time": "Choose Time",
+        "employe": "Choose Staff",
+        "noem": "No employee available at this time",
+        "continue": "Continue"
+    },
+    "setLocation": {
+        "title": "Set Your Location",
+        "popular": "Popular Locations",
+        "search": "Recent Search"
+    },
+    "signup": {
+        "new": "Create New Account",
+        "Referralcode": "Referral code",
+        "ReferralcodePlace": "Enter your referral code",
+        "Name": "Name",
+        "nameMessage1": "Name is required.",
+        "nameMessage2": "Name should be min 3 chars long.",
+        "EmailID": "Email ID",
+        "eailMessage": "Email is required.",
+        "email2": "Please provide valid email id.",
+        "number": "Phone Number",
+        "number1Messagea": "Mobile number is required.",
+        "number2mes": "Mobile Number Should Be 10 Digits",
+        "nuber3me": " Only numerical values allowed.",
+        "password": "Password",
+        "pass1": "Password Required",
+        "passw": " Password Must be 8 Characters",
+        "new2": "Create new account",
+        "already": "Already have an account! ",
+        "log": "Login",
+        "click": "By clicking",
+        "new4": "Create new account",
+        "agree": "you agree to the following",
+        "terms": "Terms & Conditions",
+        "namePlace": "Enter your full name",
+        "emailPlace": "Enter your email Id",
+        "phonePlace": "00000000",
+        "phone_code": "+968",
+        "passwordPlace": "Enter your password"
+    },
+    "singleCouponPage": {
+        "title": "Offers"
+    },
+    "terms": {
+        "term": "Terms & Conditions"
+    },
+    "topServices": {
+        "title": "Top Categories",
+        "book": "Book"
+    },
+    "menu": {
+        "offes": "Top Offers",
+        "terms": "Terms & Conditions",
+        "privacy": "Privacy Policy",
+        "about": "About",
+        "invites": "Invites A Friend",
+        "logout": "Logout",
+        "language": "Select language",
+        "hi": "Hi"
+    },
+    "errors": {
+        "confirmErr": "The confirm field is required.",
+        "oldPassErr": "The old password field is required.",
+        "passErr": "The new  password field is required.",
+        "oldPlaceholder": "Enter Old Password",
+        "newPlaceholder": "Enter New Password",
+        "confirmPlaceholder": "Enter Confirm Password",
+        "loginplaacePass": "Password",
+        "loginPlaceEMail": "Email ID"
+    },
+    "loginErr": {
+        "email": "The email field is required.",
+        "password": "The password field is required."
+    },
+    "buttonDiv": [
+        {
+            "name": "SERVICES"
+        },
+        {
+            "name": "GALLERY"
+        },
+        {
+            "name": "ABOUT"
+        },
+        {
+            "name": "REVIEW"
+        }
+    ],
+    "addAddresss": {
+        "stret": "Street",
+        "city": "City",
+        "state": "State",
+        "Country": "Country"
+    },
+    "searchResulePage": {
+        "cancel": "Cancel",
+        "searchPlace": "search here",
+        "resule": "Search result",
+        "km": "Km",
+        "book": "Book"
+    },
+    "verify": {
+        "title": "Verification",
+        "otp": "otp",
+        "setOtpHere": "Set your OTP here.",
+        "next": "Next",
+        "dont": "Don't Receive OTP? ",
+        "resen": "Resend",
+        "msg": "We have sent otp to verify your mobile number & Email id"
+    },
+    "gender": [
+        {
+            "label": "Male"
+        },
+        {
+            "label": "Female"
+        },
+        {
+            "label": "Both"
+        }
+    ],
+    "serviceAt": {
+        "title": "Service At",
+        "homeSalon": "Salon & Home"
+    },
+    "exitapp": {
+        "header": "App termination",
+        "message": "Do you want to close the app?",
+        "Stay": "Stay",
+        "Exit": "Exit",
+        "Cancel": "Cancel",
+        "oK": "OK",
+        "header_sec": "Are you sure!",
+        "msg": "you will be logged out"
+    }
+}

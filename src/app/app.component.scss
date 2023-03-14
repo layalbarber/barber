@@ -1,0 +1,44 @@
+.my-custom-menu {
+    --width: 70%;
+}
+
+ion-header {
+    border-top: 2.2px solid var(--input-color);
+    border-bottom: 1px solid var(--input-text-color);
+    p {
+        font-size: 14px;
+        color: var(--black-color);
+        font-family: mon-bold;
+        padding-left: 14px;
+        padding-bottom: 11px;
+        padding-top: 9px;
+        padding-right: 16px;
+    }
+}
+
+ion-item {
+    margin-top: -12px;
+    margin-left: -21px;
+    ion-label {
+        font-family: mon-regular;
+    }
+    ion-select {
+        font-family: mon-regular;
+    }
+}
+
+ion-content {
+    p {
+        font-size: 14px;
+        font-family: mon-medium;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    p::first-letter {
+        text-transform: uppercase !important;
+    }
+    ion-button {
+        display: block;
+        text-align: left;
+    }
+}

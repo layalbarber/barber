@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" fill="clear" slot="start">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>{{'forgot.VerifyUser' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios"> 
+    <div class="ion-text-center forgott_image">
+        <img src="../../../assets/general_images/forgot.png">
+    </div>
+    <div class="ion-text-center forgott_heading ion-margin-bottom">
+        <p class="h1">{{'forgot.VerifyHere' | translate}}</p>
+        <p class="h3">{{'forgot.find' | translate}}</p>
+    </div>
+    <ion-row class="ion-padding-start ion-padding-end ion-padding-top ion-margin-top">
+        <ion-col size="12" class="ion-padding-top">
+            <ion-text>{{'forgot.EmailID' | translate}}</ion-text><br>
+            <ion-input [(ngModel)]="email" placeholder="{{'forgot.emailPlace' | translate}}"></ion-input>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-start ion-padding-end signup">
+        <ion-col size="12">
+            <ion-button mode="md" expand="full" (click)="otp()" color="var(--pink-color)">{{'forgot.otp' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+    <div class="ion-text-center footer">
+        <p>{{'forgot.email' | translate}}<br> {{'forgot.send' | translate}}</p>
+    </div>
+</ion-content>

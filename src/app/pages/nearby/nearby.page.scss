@@ -1,0 +1,146 @@
+ion-header {
+    ion-toolbar {
+        --padding-end: 10px;
+
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: "mon-bold";
+        }
+
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+
+        .menu {
+            color: black;
+        }
+
+        .search {
+            margin-right: 13px;
+        }
+    }
+}
+
+ion-content {
+    .salon_labelcol {
+        padding-top: 10px;
+    }
+
+    .nearby_row {
+        padding-left: 15px;
+    }
+
+    .salon-slider {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        right: 0;
+        display: flex;
+        overflow: scroll;
+
+        .right {
+            position: absolute;
+            top: 5%;
+            right: -11px;
+            color: var(--pink-color);
+            font-family: "mon-bold";
+            text-transform: uppercase;
+            font-size: 12px;
+            border: 1.7px solid var(--pink-color);
+            border-radius: 7px;
+            height: 27px;
+            width: 53px;
+        }
+
+        .left {
+            position: absolute;
+            top: 1%;
+            left: 11px;
+            color: var(--pink-color);
+            font-family: "mon-bold";
+            text-transform: uppercase;
+            font-size: 12px;
+            border: 1.7px solid var(--pink-color);
+            border-radius: 7px;
+            height: 27px;
+            width: 53px;
+        }
+
+        .salon-destination {
+            background-color: white;
+            margin: 15px;
+            margin-right: 0px;
+            min-width: 110%;
+            border-radius: 10px;
+
+            img {
+                border-radius: 9px;
+            }
+
+            h2 {
+                margin: 0px;
+                font-size: 14px;
+                font-family: "mon-bold";
+                margin-bottom: 10px;
+            }
+
+            ion-text {
+                font-size: 12px;
+                color: var(--input-text-color);
+                font-family: "mon-regular";
+            }
+
+            .address2 {
+                font-weight: bold !important;
+            }
+
+            .info {
+                margin: 0px;
+                margin-top: 4px;
+                display: flex;
+                justify-content: space-between;
+
+                .near_flex {
+                    display: flex;
+                }
+
+                ion-icon {
+                    font-size: 12px;
+                    color: var(--star-color);
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
+
+                ion-text {
+                    font-size: 10px;
+                    color: var(--green-color);
+                    font-family: "mon-regular";
+                    margin-left: 7px;
+                    margin-right: 7px;
+                }
+
+                span {
+                    font-size: 10px;
+                    color: var(--input-text-color);
+                }
+            }
+        }
+    }
+}
+
+.salon-slider::-webkit-scrollbar {
+    display: none;
+}
+
+agm-map {
+    height: 100%;
+    width: 100%;
+}
+
+.star {
+    font-size: 10px;
+    font-family: "mon-regular";
+    color: var(--star-color);
+}

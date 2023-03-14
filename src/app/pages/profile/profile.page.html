@@ -1,0 +1,125 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'profile.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="nodataa" *ngIf="netCheck == 'none'">
+        <img src="../../assets/general_images/no-data-icon-10.jpg">
+    </div>
+    <div *ngIf="netCheck != 'none'">
+        <ion-row (click)="editprofile()">
+            <ion-col size="12">
+                <div class="profile_div">
+                    <ion-item class="ion-no-padding" lines="none">
+                        <img class="img" src="{{profile?.imagePath + profile?.image}}" height="50px" width="50px">
+                        <ion-label>{{profile.name}}</ion-label>
+                        <ion-button class="btn" fill="clear" mode="md" slot="end">
+                            <div class="edit_div">
+                                <ion-icon name="pencil-outline" class="edit_icon"></ion-icon>
+                            </div>
+                        </ion-button>
+                    </ion-item>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <h1>{{'profile.personalInfo' | translate}}</h1>
+
+        <div class="input-div">
+            <div class="margin-bottom">
+                <p>{{'profile.name' | translate}}</p>
+                <ion-input readonly="true" value="{{profile.name}}" type="text"></ion-input>
+            </div>
+            <div class="margin-bottom">
+                <p>{{'profile.email' | translate}}</p>
+                <ion-input readonly="true" value="{{profile.email}}" type="text"></ion-input>
+            </div>
+            <div class="margin-bottom">
+                <p>{{'profile.contact' | translate}}</p>
+                <ion-row class="ion-no-padding">
+                    <ion-col size="5">
+                        <ion-input readonly="true" value="{{profile.code}}" type="tel"></ion-input>
+                    </ion-col>
+                    <ion-col size="7">
+                        <ion-input readonly="true" value="{{profile.phone}}" type="tel"></ion-input>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+
+        <h1 *ngIf="this.ispoint == 1">{{'profile.pointInfo' | translate}}</h1>
+
+        <div class="input-div" *ngIf="this.ispoint == 1">
+            <div class="pontlabel">
+                <p>{{'profile.Total_points' | translate}}</p>
+                <p class="pointInp">{{profile?.total_points}}</p>
+            </div>
+            <div class="pontlabel">
+                <p>{{'profile.Remain_points' | translate}}</p>
+                <p class="pointInp">{{profile?.remain_points}}</p>
+            </div>
+            <div class="pontlabel" *ngIf="profile?.referral_code != null">
+                <p>{{'profile.referral_code' | translate}}</p>
+                <p class="pointInps">{{profile?.referral_code}}</p>
+            </div>
+            <div class="reffralcont">
+                <ion-label class="reffercon">{{'profile.Earn' | translate}} {{refralpoint}} {{'profile.referral_content'
+                    | translate}}</ion-label>
+            </div>
+        </div>
+        <h1>{{'profile.changeLable' | translate}}</h1>
+
+        <div class="input-div">
+            <div class="margin-bottom">
+                <p>{{'profile.oldLabel' | translate}}</p>
+                <ion-item class="pass_item">
+                    <ion-input [(ngModel)]="oldPassword" value="" [type]="passwordType" clearOnEdit="false"
+                        placeholder="{{'errors.oldPlaceholder' | translate}}">
+                    </ion-input>
+                    <ion-icon item-end [name]="passwordIcon" class="trans-btn" (click)='hideShowPassword()'>
+                    </ion-icon>
+                </ion-item>
+            </div>
+            <span class="err" *ngIf="oldPasswordError == '' || oldPasswordError">
+                {{oldPasswordError}}
+            </span>
+
+            <div class="margin-bottom">
+                <p>{{'profile.newPassword' | translate}}</p>
+                <ion-item class="pass_item">
+                    <ion-input [(ngModel)]="new_Password" value="" placeholder="{{'errors.newPlaceholder' | translate}}"
+                        [type]="passwordType1" clearOnEdit="false"></ion-input>
+                    <ion-icon item-end [name]="passwordIcon1" class="trans-btn" (click)='hideShowPassword1()'>
+                    </ion-icon>
+                </ion-item>
+            </div>
+            <span class="err" *ngIf="newPassError == '' || newPassError">
+                {{newPassError}}
+            </span>
+
+            <div class="margin-bottom">
+                <p>{{'profile.ConfirmPassword' | translate}}</p>
+                <ion-item class="pass_item">
+                    <ion-input [(ngModel)]="confirm" value="" placeholder="{{'errors.confirmPlaceholder' | translate}}"
+                        [type]="passwordType2" clearOnEdit="false"></ion-input>
+                    <ion-icon item-end [name]="passwordIcon2" class="trans-btn" (click)='hideShowPassword2()'>
+                    </ion-icon>
+                </ion-item>
+
+            </div>
+            <span class="err" *ngIf="confirmError == '' || confirmError">
+                {{confirmError}}
+            </span>
+
+            <ion-button class="pass" (click)="changePass()" expand="full" color="primary">{{'profile.ChangePassword' |
+                translate}}</ion-button>
+        </div>
+    </div>
+</ion-content>

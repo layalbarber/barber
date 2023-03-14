@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" fill="clear" slot="start">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>{{'emailVerify.user' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header> 
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="ion-text-center forgot_image">
+        <img src="../../../assets/general_images/forgot.png">
+    </div>
+    <div class="ion-text-center forgot_heading ion-margin-bottom">
+        <p class="h1">{{'emailVerify.email' | translate}}</p>
+        <p class="h3">{{'emailVerify.worry' | translate}}</p>
+    </div>
+    <ion-row class="ion-padding-start ion-padding-end ion-padding-top ion-margin-top">
+        <ion-col size="12" class="ion-padding-top">
+            <ion-text>{{'emailVerify.EmailID' | translate}}</ion-text><br>
+            <ion-input [(ngModel)]="email" placeholder="Enter your email Id"></ion-input>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-start ion-padding-end signup">
+        <ion-col size="12">
+            <ion-button mode="md" expand="full" (click)="otp()" color="var(--pink-color)">{{'emailVerify.next' | translate}}</ion-button>
+        </ion-col>
+    </ion-row>
+    <div class="ion-text-center footer">
+        <p>{{'emailVerify.check' | translate}}<br> {{'emailVerify.send' | translate}}</p>
+    </div>
+</ion-content>

@@ -1,0 +1,153 @@
+    ion-header {
+        .searchbar{
+            padding-top: 20px;
+        }
+        ion-toolbar {
+            ion-icon {
+                color: black;
+            }
+            ion-item {
+                height: 30px;
+                width: 100%;
+                --background: #F1F1F1;
+                border-radius: 9px;
+                ion-input {
+                    --padding-start: 20px;
+                    --padding-top: 4px !important;
+                    font-family: mon-medium;
+                    color: var(--black-color);
+                    font-size: 14px;
+                    --placeholder-opacity: 0.5;
+                    font-weight: bold;
+                    margin-top: -9px;
+                }
+                ion-icon {
+                    font-size: 24px;
+                    color: var(--input-text-color);
+                    margin-top: -5px;
+                    margin-right: 14px
+                }
+            }
+            .btn {
+                font-size: 11px;
+                color: var(--pink-color);
+                font-family: mon-medium;
+            }
+        }
+    }
+    
+    .addresss {
+        color: gray;
+        font-size: 14px;
+        font-family: mon-medium;
+        margin-left: 12px;
+    }
+    
+    ion-content {
+        .nodata_img{
+            text-align: center;
+            margin-top: 50px;
+            .nodataimg{
+                height: 100px;
+                width: 100px;
+            }
+        }
+        .address {
+            ion-item {
+                --inner-padding-top: 0px;
+                --inner-padding-end: 0px;
+                border-top: 0.2px dashed #cccccc;
+                border-bottom: 0.2px dashed #cccccc;
+                height: 46px;
+                --inner-padding-start: 0px;
+                --inner-padding-bottom: 0px;
+                .p {
+                    font-size: 14px;
+                    font-family: mon-medium;
+                }
+            }
+        }
+        .search-result {
+            margin-top: 18px;
+            font-size: 13px;
+            color: var(--input-text-color);
+            font-family: mon-medium;
+            span {
+                font-family: mon-medium;
+                color: var(--black-color);
+                font-weight: bold;
+            }
+        }
+        .salon-cards {
+            margin-top: 10px;
+            .salon-list {
+                img {
+                    border: 0.2px solid #eeeeee;
+                    border-radius: 10px;
+                }
+                margin-bottom: 14px;
+                .right {
+                    height: 27px;
+                    width: 53px;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 0%;
+                    right: 7px;
+                    overflow: hidden;
+                    color: var(--pink-color);
+                    font-family: mon-medium;
+                    border: 1.7px solid var(--pink-color);
+                    border-radius: 7px;
+                }
+                .left {
+                    height: 27px;
+                    width: 53px;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 5%;
+                    left: 7px;
+                    overflow: hidden;
+                    color: var(--pink-color);
+                    font-family: mon-medium;
+                    border: 1.7px solid var(--pink-color);
+                    border-radius: 7px;
+                }
+                h3 {
+                    margin: 0;
+                    font-size: 14px;
+                    margin-bottom: 6px;
+                    color: var(--black-color);
+                    font-family: mon-semibold;
+                }
+                .address {
+                    font-size: 12px;
+                    font-family: mon-regular;
+                }
+                .p {
+                    font-size: 11px;
+                    font-family: mon-medium;
+                    ion-icon {
+                        color: var(--star-color);
+                        font-size: 12px;
+                    }
+                    span {
+                        color: var(--green-color);
+                        font-family: mon-medium;
+                        margin-left: 4px;
+                        font-size: 11px;
+                    }
+                    .location {
+                        color: var(--input-text-color);
+                        font-family: mon-medium;
+                    }
+                    ion-text {
+                        font-size: 10px;
+                    }
+                }
+                .col-border {
+                    border-bottom: 0.1px solid #eeeeee;
+                    padding-bottom: 7px;
+                }
+            }
+        }
+    }

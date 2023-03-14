@@ -1,0 +1,178 @@
+.nodataa {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+
+.nodataa img {
+    height: 130px
+}
+
+ion-header ion-toolbar {
+    --padding-start: 10px;
+    --padding-end: 10px
+}
+
+ion-header ion-toolbar ion-title {
+    font-size: 14px;
+    color: var(--black-color);
+    font-family: mon-bold
+}
+
+ion-header ion-toolbar ion-icon {
+    color: var(--black-color);
+    font-size: 20px
+}
+
+ion-header ion-toolbar .menu {
+    color: #000
+}
+
+ion-header ion-toolbar .search {
+    margin-right: 13px
+}
+
+ion-content .slidecontainer {
+    margin-top: 15px
+}
+
+ion-content .slidecontainer .discount {
+    margin-top: 31px
+}
+
+ion-content .slidecontainer .discount p {
+    font-size: 13px;
+    color: #fff;
+    font-family: mon-semibold
+}
+
+ion-content .slidecontainer .discount h3 {
+    color: #fff;
+    font-size: 50px;
+    font-family: mon-black;
+    margin: -5px
+}
+
+ion-content .slidecontainer .dark-layer {
+    width: 100%;
+    height: 100%
+}
+
+ion-content .slidecontainer .slide {
+    height: 175px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .164)
+}
+
+ion-content .slidecontainer .slide img {
+    border-radius: 10px;
+    opacity: 3;
+    display: block;
+    width: 100%
+}
+
+ion-content .slidecontainer .slide .dark-layer {
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border-radius: 10px;
+    left: 0px
+}
+
+ion-content .coupen-div:nth-child(3n+1) {
+    background: #ffb5cc;
+    background: rgba(255, 181, 204, .5)
+}
+
+ion-content .coupen-div:nth-child(3n+1) .col-first {
+    background: #ffb5cc !important;
+    opacity: 2 !important
+}
+
+ion-content .coupen-div:nth-child(3n+1) ion-button {
+    color: #ffb5cc !important
+}
+
+ion-content .coupen-div:nth-child(3n+2) {
+    background: #b5b8ff;
+    background: rgba(181, 184, 255, .5)
+}
+
+ion-content .coupen-div:nth-child(3n+2) .col-first {
+    background: #b5b8ff !important;
+    opacity: 2 !important
+}
+
+ion-content .coupen-div:nth-child(3n+2) ion-button {
+    color: #b5b8ff !important
+}
+
+ion-content .coupen-div:nth-child(3n+3) {
+    background: #ffb5b5;
+    background: rgba(255, 181, 181, .5)
+}
+
+ion-content .coupen-div:nth-child(3n+3) .col-first {
+    background: #ffb5b5 !important;
+    opacity: 2 !important
+}
+
+ion-content .coupen-div:nth-child(3n+3) ion-button {
+    color: #ffb5b5 !important
+}
+
+ion-content .coupen-div {
+    border-radius: 10px;
+    margin-bottom: 20px
+}
+
+ion-content .coupen-div ion-button {
+    width: 61px;
+    height: 27px;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: mon-medium;
+    color: var(--pink-color);
+    border-radius: 4px;
+    position: absolute;
+    top: 26%;
+    right: 15px
+}
+
+ion-content .coupen-div .col-first {
+    height: 80px;
+    width: 75px;
+    opacity: 1;
+    border-radius: 10px;
+    text-align: center
+}
+
+ion-content .coupen-div .col-first h1 {
+    font-size: 25px;
+    font-family: mon-bold
+}
+
+ion-content .coupen-div .col-second {
+    border-radius: 7px
+}
+
+ion-content .coupen-div .col-second .coupen-code {
+    margin: 0px;
+    margin-top: 7px;
+    font-size: 14px;
+    font-family: mon-bold;
+    color: #fff
+}
+
+ion-content .coupen-div .col-second .coupen-message {
+    margin: 0px;
+    margin-top: 4px;
+    font-size: 12px;
+    font-family: mon-regular;
+    color: #fff
+}

@@ -1,0 +1,8 @@
+<svg id="current_location" data-name="current location" xmlns="http://www.w3.org/2000/svg" width="19.711" height="19.711" viewBox="0 0 19.711 19.711">
+  <path id="Path_29" data-name="Path 29" d="M10.168,18.586a8.418,8.418,0,1,1,8.418-8.418A8.428,8.428,0,0,1,10.168,18.586Zm0-15.194a6.776,6.776,0,1,0,6.776,6.776A6.783,6.783,0,0,0,10.168,3.393Z" transform="translate(-0.313 -0.313)" fill="#e06287"/>
+  <path id="Path_30" data-name="Path 30" d="M11.821,4.517A.822.822,0,0,1,11,3.7V.821a.821.821,0,0,1,1.643,0V3.7A.822.822,0,0,1,11.821,4.517Z" transform="translate(-1.966)" fill="#e06287"/>
+  <path id="Path_31" data-name="Path 31" d="M22.2,12.643H19.321a.821.821,0,0,1,0-1.643H22.2a.821.821,0,0,1,0,1.643Z" transform="translate(-3.306 -1.966)" fill="#e06287"/>
+  <path id="Path_32" data-name="Path 32" d="M11.821,23.017A.822.822,0,0,1,11,22.2V19.321a.821.821,0,0,1,1.643,0V22.2A.822.822,0,0,1,11.821,23.017Z" transform="translate(-1.966 -3.306)" fill="#e06287"/>
+  <path id="Path_33" data-name="Path 33" d="M3.7,12.643H.821A.821.821,0,0,1,.821,11H3.7a.821.821,0,0,1,0,1.643Z" transform="translate(0 -1.966)" fill="#e06287"/>
+  <path id="Path_34" data-name="Path 34" d="M11.464,13.928a2.464,2.464,0,1,1,2.464-2.464A2.467,2.467,0,0,1,11.464,13.928Zm0-3.285a.821.821,0,1,0,.821.821A.823.823,0,0,0,11.464,10.643Z" transform="translate(-1.608 -1.608)" fill="#e06287"/>
+</svg>

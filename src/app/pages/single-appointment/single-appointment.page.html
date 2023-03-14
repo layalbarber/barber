@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button mode="md" defaultHref="tabs/appointment" text="" icon="chevron-back" (click)="backs()"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'SingleAppointment.book' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="upcoming">
+        <ion-row class="salonrow">
+            <ion-col size="3">
+                <img src="{{confirm?.salon?.imagePath + confirm?.salon?.image}}" height="70px" width="100%" alt="">
+            </ion-col>
+            <ion-col size="9" class="bookingcol">
+                <h1>{{confirm?.salon?.name}}</h1>
+                <p class="address">{{confirm?.salon?.address}}</p>
+                <p class="rating">
+                    <ion-icon name="star" class="star"></ion-icon>
+                    {{confirm?.salon?.rate}} {{'SingleAppointment.Rating' | translate}}
+                    <img class="img1" src="../../../assets/review_profile/Ellipse 9.png">
+                    <ion-icon name="calendar" class="calanders"></ion-icon> {{confirm?.date}} {{confirm?.start_time}}
+                </p>
+                <ion-badge class="badgep" *ngIf="confirm?.booking_status == 'Pending'">{{'SingleAppointment.Pending' | translate}}</ion-badge>
+                <ion-badge class="badgec" *ngIf="confirm?.booking_status == 'Completed'">{{'SingleAppointment.Completed' | translate}}</ion-badge>
+                <ion-badge class="badgea" *ngIf="confirm?.booking_status == 'Approved'">{{'SingleAppointment.Approved' | translate}}</ion-badge>
+                <ion-badge class="badgeca" *ngIf="confirm?.booking_status == 'Cancel'">{{'SingleAppointment.Cancel' | translate}}</ion-badge>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-row class="ion-padding-top">
+        <ion-col size="12">
+            <ion-item class="ion-no-padding" lines="none" *ngIf="language == 'en'">
+                <img class="empimg" src="{{confirm?.empDetails?.imagePath + confirm?.empDetails?.image}}" height="35px" width="35px">
+                <ion-text>{{confirm?.empDetails?.name}}</ion-text>
+            </ion-item>
+            <ion-item class="ion-no-padding" lines="none" *ngIf="language == 'ro'">
+                <img class="empimg" src="{{confirm?.empDetails?.imagePath + confirm?.empDetails?.image}}" height="35px" width="35px">
+                <ion-text>{{confirm?.empDetails?.name}}</ion-text>
+            </ion-item>
+            <ion-item class="ion-no-padding" lines="none" *ngIf="language == 'ar'">
+                <img class="empimgs" src="{{confirm?.empDetails?.imagePath + confirm?.empDetails?.image}}" height="35px" width="35px">
+                <ion-text>{{confirm?.empDetails?.name}}</ion-text>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+    <div class="service_section">
+        <h1 class="ion-margin-top" style="margin-left: 0px;">{{'SingleAppointment.selected' | translate}}</h1>
+        <h2 *ngFor="let l of service">{{l.name}}
+            <span class="ion-float-right" *ngIf="language == 'en'">{{currency}}{{l.price}}</span>
+            <span class="ion-float-right" *ngIf="language == 'ro'">{{currency}}{{l.price}}</span>
+            <span class="ion-float-left" *ngIf="language == 'ar'">{{currency}}{{l.price}}</span>
+        </h2>
+        <hr>
+        <h2>{{'SingleAppointment.discount' | translate}}
+            <span *ngIf="confirm?.discount > 0 && language == 'en'" class="ion-float-right">{{currency}}{{confirm?.discount}}</span>
+            <span *ngIf="confirm?.discount == 0 && language == 'en'" class="ion-float-right">{{currency}}0 </span>
+            <span *ngIf="confirm?.discount > 0 && language == 'ro'" class="ion-float-right">{{currency}}{{confirm?.discount}}</span>
+            <span *ngIf="confirm?.discount == 0 && language == 'ro'" class="ion-float-right">{{currency}}0 </span>
+            <span *ngIf="confirm?.discount > 0 && language == 'ar'" class="ion-float-left">{{confirm?.discount}}</span>
+            <span *ngIf="confirm?.discount == 0 && language == 'ar'" class="ion-float-left">{{currency}}0 </span>
+        </h2>
+        <h2 *ngIf="confirm?.booking_at =='Home'">{{'SingleAppointment.extracharge' | translate}}
+            <span class="ion-float-right" *ngIf="language == 'en'">{{currency}}{{confirm?.extra_charges}}</span>
+            <span class="ion-float-right" *ngIf="language == 'ro'">{{currency}}{{confirm?.extra_charges}}</span>
+            <span class="ion-float-left" *ngIf="language == 'ar'">{{currency}}{{confirm?.extra_charges}}</span>
+        </h2>
+        <h2>{{'SingleAppointment.total' | translate}}
+            <span class="ion-float-right totals" *ngIf="language == 'en'">{{currency}}{{confirm?.payment}}</span>
+            <span class="ion-float-right totals" *ngIf="language == 'ro'">{{currency}}{{confirm?.payment}}</span>
+            <span class="ion-float-left totals" *ngIf="language == 'ar'">{{currency}}{{confirm?.payment}}</span>
+        </h2>
+    </div>
+    <hr>
+    <div *ngIf="ispoint == 1 && confirm?.points > 0">
+        <h1 class="ion-margin-top" style="margin-left: 0px;">{{'SingleAppointment.Loyaltypoint' | translate}}</h1>
+        <h2>{{'SingleAppointment.Points you earned' | translate}}
+            <span class="ion-float-right point" *ngIf="language == 'en'">{{confirm?.points}}</span>
+            <span class="ion-float-right point" *ngIf="language == 'ro'">{{confirm?.points}}</span>
+            <span class="ion-float-left point" *ngIf="language == 'ar'">{{confirm?.points}}</span>
+        </h2>
+    </div>
+</ion-content>

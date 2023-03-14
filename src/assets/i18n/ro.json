@@ -1,0 +1,357 @@
+{
+    "login": {
+        "forgotPassword": "Ti-ai uitat parola ?",
+        "login": "Autentificare",
+        "signUp": "Nu aveți un cont?",
+        "new": "Inscrie-te"
+    },
+    "home": {
+        "title": "Acasă",
+        "location": "Selectați locația dvs.",
+        "AllSalon": "Toate Salons.",
+        "book": "carte",
+        "category": "toate categoriile",
+        "near": "Aproape de locația dvs."
+    },
+    "addReview": {
+        "share": "Împărtășiți-vă experiența",
+        "how": "Câte stele vei da",
+        "shareRe": "Distribuiți recenzia",
+        "service": "Adăugați o recenzie"
+    },
+    "cancel": {
+        "cancelApo": "Anulează programarea!",
+        "sure": "Esti sigur",
+        "canApoIn": "vrei să-ți anulezi programarea?",
+        "no": "Nu",
+        "Yes": "da"
+    },
+    "offer": {
+        "title": "promoții",
+        "coming": "Vine în curând",
+        "Apply": "aplica"
+    },
+    "SelectLanguage": {
+        "label": "Selecteaza limba",
+        "english": "Engleză",
+        "arabic": "arabic",
+        "romanian": "Română",
+        "Cancel": "Anulare",
+        "ok": "O.K"
+    },
+    "payment-modal": {
+        "successMesasge": "Rezervarea rezervării dvs. este realizată cu succes.",
+        "canSee": "Puteți vedea viitoarea întâlnire în secțiunea NOMINARE",
+        "dot": "Du-te acolo"
+    },
+    "SaveLocation": {
+        "title": "Salveaza locatia",
+        "save": "Doriți să salvați această locație",
+        "forFutur": "Pentru viitor ? ",
+        "No": "Nu",
+        "Yes": "da"
+    },
+    "social": {
+        "share": "Imparte cu prietenii tai",
+        "Whatsapp": "Whatsapp",
+        "facebook": "Facebook",
+        "Gmail": "Gmail",
+        "Instagram": "Instagram"
+    },
+    "SortBy": {
+        "sort": "Filtrează după",
+        "look": "Căuta",
+        "Categories": "Categorii",
+        "Cancel": "Anulare",
+        "Apply": "aplica"
+    },
+    "About": {
+        "title": "Despre aplicație"
+    },
+    "addAddress": {
+        "title": "Abordare",
+        "Save": "Salvați"
+    },
+    "AllSalons": {
+        "title": "Toate saloanele",
+        "Book": "Carte"
+    },
+    "Appointment": {
+        "title": "Programare",
+        "Upcoming": "Viitoare",
+        "Completed": "Efectuat",
+        "viewdetail": "Vedere",
+        "Canceled": "Anulat",
+        "Rating": "Evaluare",
+        "ServiceType": "Tipul serviciului",
+        "CancelBooking": "Anulați rezervarea",
+        "Seeall": "Vezi mai mult",
+        "showless": "Arata mai putin",
+        "reviewAdd": "+ Adăugați recenzia dvs."
+    },
+    "confirm": {
+        "title": "Direcția de destinație",
+        "destination": "Destinația ta",
+        "km": "km"
+    },
+    "editProfile": {
+        "title": "Editează profilul",
+        "personal": "Informatie personala",
+        "name": "Editați-vă numele",
+        "email": "Editați-vă EmailId",
+        "contactNmber": "Editați-vă numărul de contact",
+        "Location": "Gestionați-vă locația",
+        "addlocation": "+ Adăugați o locație nouă",
+        "Remove": "Elimina",
+        "Change": "salva"
+    },
+    "emailVerify": {
+        "user": "Verificați utilizatorul",
+        "email": "Verificare a email-ului!",
+        "worry": "Nu vă faceți griji, vă vom găsi contul",
+        "EmailID": "ID de e-mail",
+        "next": "Următorul",
+        "check": "Vă rugăm să verificați email-ul",
+        "send": "vă vom trimite un OTP pe mail."
+    },
+    "forgot": {
+        "VerifyUser": "Verificați utilizatorul",
+        "VerifyHere": "Verificați aici!",
+        "find": "Nu vă faceți griji, vă vom găsi contul",
+        "EmailID": "ID de e-mail",
+        "otp": "Trimite-mi OTP",
+        "email": "Vă rugăm să verificați email-ul",
+        "send": "vă vom trimite un OTP pe mail.",
+        "emailPlace": "Introduceți adresa de email aici"
+    },
+    "BookAppointment": {
+        "extracharge": "costuri suplimentare",
+        "book": "Rezervați programare",
+        "confirm": "Confirmarea rezervării",
+        "selected": "Serviciul pe care l-ați ales",
+        "discount": "Reducere",
+        "total": "Total",
+        "coupon": "Aveți un cupon de utilizat",
+        "Clickhere": "Click aici",
+        "payment": "selecteaza metoda de plata",
+        "CashPay": "Plata în numerar",
+        "make": "Plateste"
+    },
+    "SingleAppointment": {
+        "extracharge": "costuri suplimentare",
+        "book": "Detalii despre programare",
+        "selected": "Serviciul pe care l-ați ales",
+        "discount": "Reducere",
+        "total": "Total",
+        "Rating": "Evaluare",
+        "Loyaltypoint": "Punct de loialitate",
+        "Points you earned": "Puncte câștigate ",
+        "Pending": "In asteptarea",
+        "Completed": "Efectuat",
+        "Approved": "Aprobat",
+        "Cancel": "Anulare"
+    },
+    "NearBy": {
+        "near": "Aproape de tine",
+        "Book": "Carte"
+    },
+    "appoinement": {
+        "Appointment": "Programare",
+        "you": "Nu aveți nicio programare stabilită",
+        "home": "Du-te acasă"
+    },
+    "notification": {
+        "title": "Notificare"
+    },
+    "offers": {
+        "Offers": "promoții"
+    },
+    "passwordChanged": {
+        "message1": "Felicitări!",
+        "message2": "Parola dvs. a fost trimisă prin e-mail ....!",
+        "login": "Accesați autentificarea"
+    },
+    "privacy": {
+        "title": "Politica de Confidențialitate"
+    },
+    "profile": {
+        "title": "Profil",
+        "personalInfo": "Informatie personala",
+        "pointInfo": "Punct de loialitate",
+        "Total_points": "Total puncte câștigate",
+        "Remain_points": "Puncte rămase",
+        "referral_code": "Codul de recomandare",
+        "name": "Editați-vă numele",
+        "email": "Editați-vă ID-ul de e-mail",
+        "contact": "Editați-vă numărul de contact",
+        "changeLable": "Schimbați parola",
+        "oldLabel": "Parola veche",
+        "notCorrect": "Parola veche nu este corectă",
+        "newPassword": "Parolă Nouă",
+        "ConfirmPassword": "Confirmă parola",
+        "ChangePassword": "Schimbați parola",
+        "Earn": "Câştiga",
+        "referral_content": "puncte prin partajarea codului de recomandare cu prietenul tău."
+    },
+    "salonProfile": {
+        "Rating": "Evaluare",
+        "About": "Despre",
+        "ServiceonDays": "Serviciu în zile",
+        "Closed": "Închis",
+        "Sunday": "duminică",
+        "Monday": "luni",
+        "Tuesday": "marţi",
+        "Wednesday": "miercuri",
+        "Thursday": "joi",
+        "Friday": "vineri",
+        "Saturday": "sâmbătă",
+        "see": "Vedeți direcția",
+        "contac": "Informații de contact",
+        "websi": "Site-ul web",
+        "visit": "Vizitați site-ul web",
+        "call": "Apel",
+        "bookService": "Serviciu de carte",
+        "review": "Revizuire",
+        "totalReview": "Recenzie totală",
+        "total": "Total",
+        "open": "OPENl",
+        "close": "ÎNCHIDE"
+    },
+    "selectTime": {
+        "title": "Selectați Ora",
+        "time": "Alege Timp",
+        "employe": "Alege personalul",
+        "noem": "Niciun angajat nu este disponibil în acest moment",
+        "continue": "Continua"
+    },
+    "setLocation": {
+        "title": "Setați locația",
+        "popular": "Locații populare",
+        "search": "Căutare recentă"
+    },
+    "signup": {
+        "new": "Creează un cont nou",
+        "Referralcode": "Codul de recomandare",
+        "ReferralcodePlace": "Introduceți codul de recomandare",
+        "Name": "Nume",
+        "nameMessage1": "Numele este obligatoriu.",
+        "nameMessage2": "Numele trebuie să aibă minimum 3 caractere.",
+        "EmailID": "ID de e-mail",
+        "eailMessage": "E-mailul este obligatoriu.",
+        "email2": "Vă rugăm să furnizați un e-mail valid.",
+        "number": "Numar de telefon",
+        "number1Messagea": "Este necesar un număr de telefon mobil.",
+        "number2mes": "Numărul de telefon mobil ar trebui să aibă 10 cifre",
+        "nuber3me": " Sunt permise numai valori numerice.",
+        "password": "Parola",
+        "pass1": "Parolă solicitată",
+        "passw": " Parola trebuie să aibă 8 caractere",
+        "new2": "Creează un cont nou",
+        "already": "Ai deja un cont!",
+        "log": "Autentificare",
+        "click": "Dând clicuri",
+        "new4": "Creează un cont nou",
+        "agree": "sunteți de acord cu următoarele",
+        "terms": "termeni si conditii",
+        "namePlace": "Introduceți numele dvs. complet",
+        "emailPlace": "Introduceți ID-ul de e-mail",
+        "phonePlace": "00000000",
+        "phone_code": "+968",
+        "passwordPlace": "Introduceți parola"
+    },
+    "singleCouponPage": {
+        "title": "promoții"
+    },
+    "terms": {
+        "term": "termeni si conditii"
+    },
+    "topServices": {
+        "title": "Categorii de top",
+        "book": "Carte"
+    },
+    "menu": {
+        "offes": "Cele mai bune oferte",
+        "terms": "termeni si conditii",
+        "privacy": "Politica de Confidențialitate",
+        "about": "Despre",
+        "invites": "Invită un prieten",
+        "logout": "Deconectați-vă",
+        "language": "Selecteaza limba",
+        "hi": "Salut"
+    },
+    "errors": {
+        "confirmErr": "Câmpul de confirmare este obligatoriu.",
+        "oldPassErr": "Vechiul câmp de parolă este obligatoriu.",
+        "passErr": "Noul câmp de parolă este obligatoriu.",
+        "oldPlaceholder": "Intră Old Passoword",
+        "newPlaceholder": "Introduceți New Passoword",
+        "confirmPlaceholder": "Introduceți Confirmă parola",
+        "loginplaacePass": "Parola",
+        "loginPlaceEMail": "ID de e-mail"
+    },
+    "loginErr": {
+        "email": "Câmpul de e-mail este obligatoriu.",
+        "password": "Câmpul de parolă este obligatoriu."
+    },
+    "buttonDiv": [
+        {
+            "name": "SERVICII"
+        },
+        {
+            "name": "GALERIE"
+        },
+        {
+            "name": "DESPRE"
+        },
+        {
+            "name": "REVIZUIRE"
+        }
+    ],
+    "addAddresss": {
+        "stret": "Stradă",
+        "city": "Oraș",
+        "state": "Stat",
+        "Country": "Țară"
+    },
+    "searchResulePage": {
+        "cancel": "Anulare",
+        "searchPlace": "caută aici",
+        "resule": "Rezultatul căutării",
+        "km": "Km",
+        "book": "Carte"
+    },
+    "verify": {
+        "title": "Verificare",
+        "otp": "otp",
+        "setOtpHere": "Setați OTP aici.",
+        "next": "Următorul",
+        "dont": "Nu primiți OTP? ",
+        "resen": "Retrimiteți",
+        "msg": "Am trimis otp pentru a vă verifica numărul de telefon mobil și ID-ul de e-mail"
+    },
+    "gender": [
+        {
+            "label": "Masculin"
+        },
+        {
+            "label": "Femeie"
+        },
+        {
+            "label": "Ambii"
+        }
+    ],
+    "serviceAt": {
+        "title": "Serviciu la",
+        "homeSalon": "Salon și casă"
+    },
+    "exitapp": {
+        "header": "Închiderea aplicației",
+        "message": "Doriți să închideți aplicația?",
+        "Stay": "Stau",
+        "Exit": "Ieșire",
+        "Cancel": "Anulare",
+        "oK": "O.K",
+        "header_sec": "Esti sigur!",
+        "msg": "vei fi deconectat"
+    }
+}

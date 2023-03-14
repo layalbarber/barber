@@ -1,0 +1,27 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-title>{{'SaveLocation.title' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="ion-text-center">
+        <p class="save">{{'SaveLocation.save' | translate}} <br> {{'SaveLocation.forFutur' | translate}} </p>
+        <hr class="hr">
+        <ion-row class="ion-no-padding location">
+            <ion-col size="12" class="ion-no-padding">
+                <p class="ion-float-start">
+                    <img src="../../../assets/icon/location.png"> {{item.name}}
+                </p>
+                <span class="ion-float-right"></span><br>
+                <h4>{{item.address | slice:0:90}}</h4>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <div class="buttons">
+        <ion-button class="firstbtn" (click)="closeOnly()" fill="clear">{{'SaveLocation.No' | translate}}</ion-button>
+        <ion-button class="secondbtn" (click)="close(item)" fill="clear">{{'SaveLocation.Yes' | translate}}</ion-button>
+    </div>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button (click)="close()" mode="md" defaultHref="tabs/home/cart" text=""></ion-back-button>
+        </ion-buttons>
+        <ion-title mode="md">Manage Address</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-top">
+    <div class="ion-margin-top">
+        <div class="address-div" *ngFor="let item of addressDiv">
+            <div class="ion-padding-start ion-padding-end">
+                <h1>
+                    <ion-icon src="../../../assets/Profile/pin.svg"></ion-icon>
+                    {{item?.street}}
+                </h1>
+                <p>{{item?.city}}, {{item?.state}}, {{item?.country}}</p>
+            </div>
+            <div class="bottom">
+                <ion-item class="ion-no-padding" lines="none">
+                    <ion-button (click)="selectAddress(item)" mode="ios" class="green" fill="clear">
+                        Select This Address
+                    </ion-button>
+                </ion-item>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="addressDiv.length == 0" class="address">
+        <img src="../../../assets/general_images/no-data-icon-10.jpg" height="150px" width="150px">
+        <p class="nodata_tag">No Address Found</p>
+    </div>
+    <ion-fab class="animated slideInUp" horizontal="end" vertical="bottom" slot="fixed" mode="ios">
+        <ion-fab-button (click)="addAddress()">
+            <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

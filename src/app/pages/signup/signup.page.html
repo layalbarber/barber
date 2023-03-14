@@ -1,0 +1,121 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" fill="clear" slot="start">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>{{'signup.new' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="container">
+        <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+            <ion-row class="ion-padding-start ion-padding-end" *ngIf="setting_package == 1">
+                <ion-col size="12">
+                    <ion-text class="label">{{'signup.Referralcode' | translate}}</ion-text><br>
+                    <ion-input [(ngModel)]="referralCode" [ngModelOptions]="{standalone: true}" type="text"
+                        placeholder="{{'signup.ReferralcodePlace' | translate}}"></ion-input>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-text class="label">{{'signup.Name' | translate}}</ion-text><br>
+                    <ion-input formControlName="name" type="text" placeholder="{{'signup.namePlace' | translate}}">
+                    </ion-input>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+                        {{'signup.nameMessage1' | translate}}
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+                        {{'signup.nameMessage2' | translate}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-text class="label">{{'signup.EmailID' | translate}}</ion-text><br>
+                    <ion-input formControlName="email" type="email" placeholder="{{'signup.emailPlace' | translate}}">
+                    </ion-input>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+                        {{'signup.eailMessage' | translate}}
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+                        {{'signup.email2' | translate}}
+                    </span>
+                    <span class="error ion-padding" *ngIf="errors">
+                        {{errors}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-text class="label">{{'signup.number' | translate}}</ion-text>
+                    <div class="number-input">
+                        <div class="code-div">
+                            <ng-select class="country-codeSelect" [clearable]="false" [(ngModel)]="code"
+                                [ngModelOptions]="{standalone: true}" [items]="cCode" bindLabel="dial_code"
+                                bindValue="dial_code">
+                                <ng-template ng-label-tmp let-item="item">
+                                    <img height="16" width="21"
+                                        src="{{'https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/' + (item.code | lowercase) + '.png'}}"
+                                        style="margin-right: 8px;margin-bottom: -2px" />
+                                    <span>{{item.dial_code}}</span>
+                                </ng-template>
+                                <ng-template ng-option-tmp let-item="item" let-index="index">
+                                    <img height="16" width="21"
+                                        src="{{'https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/' + (item.code | lowercase) + '.png'}}"
+                                        style="margin-right: 8px;margin-bottom: -2px" />
+                                    <span>{{item.dial_code}}</span>
+                                </ng-template>
+                            </ng-select>
+                        </div>
+                        <div class="number-div">
+                            <div class="input-div">
+                                <ion-input [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" type="tel"
+                                    placeholder="{{'signup.phonePlace' | translate}}"></ion-input>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="error ion-padding" *ngIf="err?.phone">
+                        {{err?.phone}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-text class="label">{{'signup.password' | translate}}</ion-text><br>
+                    <ion-item class="pass_item">
+                        <ion-input formControlName="password" [type]="passwordType" clearOnEdit="false"
+                            placeholder="{{'signup.passwordPlace' | translate}}" class="password_Input"></ion-input>
+                        <ion-icon item-end [name]="passwordIcon" class="trans-btn" (click)='hideShowPassword()'>
+                        </ion-icon>
+                    </ion-item>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+                        {{'signup.pass1' | translate}}
+                    </span>
+                    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+                        {{'signup.passw' | translate}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+            <div class="ion-padding-start ion-padding-end signup">
+                <ion-button type="submit" mode="md" expand="full" color="var(--pink-color)">
+                    {{'signup.new2' | translate}}</ion-button>
+            </div>
+        </form>
+        <div class="ion-text-center login">
+            <p>{{'signup.already' | translate}} <span (click)="loginn()">{{'signup.log' | translate}}</span></p>
+        </div>
+    </div>
+    <ion-row class="footer">
+        <ion-col size="12">
+            <p>{{'signup.click' | translate}} <span>{{'signup.new4' | translate}}</span> {{'signup.agree' | translate}}
+                <span (click)="privacy()">{{'signup.terms' | translate}}</span>
+            </p>
+        </ion-col>
+    </ion-row>
+</ion-content>

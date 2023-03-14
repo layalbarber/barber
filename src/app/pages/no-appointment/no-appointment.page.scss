@@ -1,0 +1,33 @@
+ion-header {
+    ion-toolbar {
+        
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-bold;
+        }
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    right: 0;
+    top: 35%;
+    p {
+        font-size: 16px;
+        font-family: mon-semibold;
+        color: var(--input-text-color);
+        margin-bottom: 2px;
+    }
+    ion-button {
+        color: var(--blue-color);
+        font-size: 14px;
+        font-family: mon-semibold;
+    }
+}

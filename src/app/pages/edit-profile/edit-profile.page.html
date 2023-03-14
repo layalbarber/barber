@@ -1,0 +1,113 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" slot="start" fill="clear">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>
+            {{'editProfile.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-row>
+        <ion-col size="12">
+            <div class="profile_div">
+                <ion-item class="ion-no-padding" lines="none">
+                    <img (click)="selectImage()" class="img" height="50px" width="50px" src="{{image}}">
+                    <ion-label class="daatName">{{data.name}}</ion-label>
+                </ion-item>
+            </div>
+        </ion-col>
+    </ion-row>
+
+    <h1>{{'editProfile.personal' | translate}}</h1>
+
+    <div class="input-div">
+        <div class="margin-bottom">
+            <p>{{'editProfile.name' | translate}}</p>
+            <ion-input [(ngModel)]="name" value="{{data.name}}" type="text"></ion-input>
+        </div>
+        <div class="margin-bottom">
+            <p>{{'editProfile.email' | translate}}</p>
+            <ion-input readonly="true" value="{{data.email}}" type="text"></ion-input>
+        </div>
+        <div class="margin-bottom">
+            <p>{{'editProfile.contactNmber' | translate}}</p>
+            <ion-row class="ion-no-padding">
+                <ion-col size="4">
+                    <div class="code-div">
+                        <ng-select class="country-codeSelect" [clearable]="false" [(ngModel)]="code"
+                            [ngModelOptions]="{standalone: true}" [items]="cCode" bindLabel="dial_code"
+                            bindValue="dial_code">
+                            <ng-template ng-label-tmp let-item="item">
+                                <img height="16" width="21"
+                                    src="{{'https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/' + (item.code | lowercase) + '.png'}}"
+                                    style="margin-right: 8px;margin-bottom: -2px" />
+                                <span>{{item.dial_code}}</span>
+                            </ng-template>
+                            <ng-template ng-option-tmp let-item="item" let-index="index">
+                                <img height="16" width="21"
+                                    src="{{'https://raw.githubusercontent.com/hjnilsson/country-flags/master/png250px/' + (item.code | lowercase) + '.png'}}"
+                                    style="margin-right: 8px;margin-bottom: -2px" />
+                                <span>{{item.dial_code}}</span>
+                            </ng-template>
+                        </ng-select>
+                    </div>
+                </ion-col>
+                <ion-col size="1"></ion-col>
+                <ion-col size="7">
+                    <ion-input [(ngModel)]="phone" value="{{data.phone}}" type="number" maxlength="10">
+                    </ion-input>
+                    <span class="err">{{p_err}}</span>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    <hr class="margin-top">
+    <h1 class="ion-margin-top">
+        {{'editProfile.Location' | translate}}
+    </h1>
+    <p (click)="addAddres()" class="add-location ion-margin-bottom">{{'editProfile.addlocation' | translate}}</p>
+
+    <ion-row *ngFor="let l of address" class="ion-margin-bottom">
+        <ion-col size="1">
+            <img src="../../../assets/icon/location.png">
+        </ion-col>
+        <ion-col size="11">
+            <div *ngIf="language == 'en'" class="address_div">
+                <p class="addresss left">{{l.street | slice:0:015}}<span *ngIf="l?.street.length > 15">...</span></p>
+
+                <div class="right">
+                    <ion-icon name="trash" class="trash" (click)="removeAddress(l)"></ion-icon>
+                    <ion-icon name="pencil" slot="end" class="pencil" (click)="edit_address(l)"></ion-icon>
+                </div>
+            </div>
+
+            <div *ngIf="language == 'ro'" class="address_div">
+                <p class="addresss left">{{l.street | slice:0:015}}<span *ngIf="l?.street.length > 15">...</span></p>
+
+                <div class="right">
+                    <ion-icon name="trash" class="trash" (click)="removeAddress(l)"></ion-icon>
+                    <ion-icon name="pencil" slot="end" class="pencil" (click)="edit_address(l)"></ion-icon>
+                </div>
+            </div>
+
+            <div *ngIf="language == 'ar'" class="address_div">
+                <p class="addresss right">{{l.street | slice:0:015}}<span *ngIf="l?.street.length > 15">...</span></p>
+
+                <div class="left">
+                    <ion-icon name="trash" class="trash" (click)="removeAddress(l)"></ion-icon>
+                    <ion-icon name="pencil" slot="end" class="pencil" (click)="edit_address(l)"></ion-icon>
+                </div>
+            </div>
+            <ion-text class="locat">{{l.city}}, {{l.state}}, {{l.country}}
+            </ion-text>
+        </ion-col>
+    </ion-row>
+
+    <div class="ion-text-center ion-margin-top">
+        <ion-button class="change" mode="md" color="var(--blue-color)" (click)="changeThis()">
+            {{'editProfile.Change' | translate}}</ion-button>
+    </div>
+</ion-content>

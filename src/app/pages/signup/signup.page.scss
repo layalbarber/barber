@@ -1,0 +1,172 @@
+ion-header {
+    ion-icon {
+        font-size: 20px;
+        color: var(--black-color);
+        font-weight: bold;
+        font-family: mom-bold;
+    }
+
+    ion-title {
+        font-family: mon-bold;
+        font-size: 14px;
+        color: var(--black-color);
+    }
+}
+
+ion-content {
+    .container {
+        margin-top: 10px;
+    }
+
+    .error {
+        color: red;
+        font-family: mon-medium;
+        font-size: 14px;
+    }
+
+    ion-row {
+        margin-bottom: 9px;
+    }
+
+    ion-text {
+        font-size: 12px;
+        color: var(--input-text-color);
+        font-family: mon-medium;
+        margin-left: 22px;
+    }
+
+    ion-input {
+        background-color: var(--input-color);
+        border-radius: 9px;
+        --padding-start: 25px;
+        --placeholder-opacity: 1;
+        height: 40px;
+        font-size: 15px;
+        font-family: mon-medium;
+        color: var(--input-text-color);
+        margin-top: 4px;
+    }
+
+    .pass_item {
+        --background: var(--input-color);
+        background-color: var(--input-color);
+        border-radius: 9px;
+        --padding-start: 25px;
+        --placeholder-opacity: 1;
+        --border-color: none;
+        --padding-start: 0px;
+        --inner-border-width: 0px 0px 0px 0px;
+        margin-top: 5px;
+    }
+
+    .trans-btn {
+        color: var(--black-color);
+        font-size: 20px;
+    }
+
+    .password_Input {
+        background-color: var(--input-color);
+        border-radius: 9px;
+        --padding-start: 25px;
+        --placeholder-opacity: 1;
+        height: 40px;
+        font-size: 15px;
+        font-family: mon-medium;
+        color: var(--input-text-color);
+    }
+
+    .signup {
+        margin-top: 16px;
+
+        ion-button {
+            height: 40px;
+            border-radius: 9px;
+            font-size: 16px;
+            margin-top: 10px;
+            overflow: hidden;
+            text-transform: none;
+            font-family: mon-medium;
+            background-color: var(--pink-color);
+        }
+    }
+
+    .number-input {
+
+        border-radius: 22px;
+        height: 44px;
+        padding: 4px 4px;
+        display: flex;
+        position: relative;
+        margin-top: 8px;
+
+        .code-div {
+            border-right: 1px solid var(--silver-color);
+            margin-top: -6px;
+            border-radius: 11px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .number-div {
+            padding-left: 8px;
+
+            .input-div {
+                padding-left: 3px;
+                width: 100%;
+
+                ion-input {
+                    font-size: 15px;
+                    font-family: "Poppins-Medium";
+                    --padding-top: 9px;
+                    position: relative;
+                    top: -7px;
+                }
+            }
+
+            .input-div {
+                padding-left: 3px;
+                width: 94%;
+            }
+        }
+
+        .button-div {
+            width: 25px;
+
+            .btn-clear {
+                --padding-start: 0px;
+                --padding-end: 0px;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .login {
+        p {
+            margin-top: 20px;
+            color: var(--black-color);
+            font-size: 12px;
+            font-family: mon-medium;
+
+            span {
+                font-family: mon-bold;
+                color: var(--pink-color);
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .footer {
+        p {
+            text-align: center;
+            font-size: 12px;
+            color: var(--black-color);
+            font-family: mon-regular;
+
+            span {
+                font-family: mon-medium;
+                color: var(--black-color);
+            }
+        }
+    }
+}

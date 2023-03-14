@@ -1,0 +1,247 @@
+ion-header {
+    border-radius: 0px 0px 20px 20px;
+    ion-toolbar {
+        --background: var(--pink-color);
+        ion-title {
+            color: white;
+        }
+        ion-back-button {
+            color: white;
+        }
+    }
+}
+
+.calendar-section {
+    background: var(--pink-color);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+    h5 {
+        text-align: center;
+        font-family: "mon-medium";
+        color: white;
+        ion-icon {
+            margin: 0px 14px -3px;
+        }
+    }
+    table {
+       
+        tr {
+            th {
+                min-width: 45px;
+                font-family: "mon-medium";
+                color: white;
+                font-size: 14px;
+            }
+            td {
+                div {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    padding-top: 5px;
+                    margin: 10px auto;
+                }
+                .active {
+                    background: white;
+                    color: var(--black-color);
+                }
+                min-width: 45px;
+                font-family: "mon-medium";
+                color: var(--input-color);
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.divfalse {
+    text-align: center;
+    margin-top: 41px;
+    .false {
+        font-size: 17px;
+        text-align: center;
+        margin-top: 40px;
+        font-family: mon-medium;
+        color: var(--pink-color);
+    }
+}
+
+.check {
+    ion-checkbox {
+        --background: #DDDDDD;
+        --background-checked: var(--pink-color);
+        --border-color-checked: white;
+        --border-color: white;
+        --border-radius: 7px;
+        --size: 19px;
+        --checkmark-color: white;
+        --checkmark-width: 2px;
+        margin-top: 10px;
+    }
+    ion-item {
+        font-size: 14px;
+        font-family: mon-medium;
+        color: var(--black-color);
+        padding-left: 14px;
+        --inner-padding-end: 0px;
+        ion-text {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-medium;
+            margin-left: 13px;
+            margin-right: 13px;
+        }
+    }
+    hr {
+        border: 0.5px dashed #eeeeee;
+        width: 77%;
+        margin-left: 59px;
+        margin-top: 0px;
+    }
+    .last_btn {
+        background-color: var(--blue-color);
+        width: 100%;
+        height: 55px;
+        position: absolute;
+    }
+    ion-button {
+        font-family: mon-medium;
+    }
+}
+
+.btnt {
+    color: var(--pink-color);
+    font-family: mon-bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 2%;
+    border-radius: 5px;
+    border: 2px solid;
+    overflow: hidden;
+}
+
+ion-content {
+    .info-title {
+        font-family: "mon-medium";
+        color: var(--blue-color);
+        margin-top: 25px;
+    }
+    .time-slot {
+        font-size: 14px;
+        font-family: "mon-medium";
+        color: var(--black-color);
+        padding: 11px 5px 6px;
+        text-align: center;
+    }
+    .active {
+        color: white;
+        background: var(--pink-color);
+        border-radius: 5px;
+    }
+    hr {
+        background: rgba(0, 0, 0, 0.12);
+    }
+    .close-section {
+        .close-icon {
+            font-size: 63px;
+            margin-top: 20px;
+        }
+        .label-one {
+            font-family: "mon-medium";
+            color: var(--blue-color);
+        }
+        .label-two {
+            font-family: "mon-medium";
+            color: var(--ion-color-dark-blue);
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        .btn-general {
+            font-size: 16px;
+            height: 42px;
+            font-family: mon-medium;
+            text-transform: uppercase;
+            background-color: var(--blue-color);
+        }
+    }
+    .open-section {
+        .service-div {
+            border-radius: 5px;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+            padding: 6px 7px 6px 12px;
+            border-left: 7px solid var(--pink-color);
+            margin-bottom: 25px;
+            .service-name {
+                font-size: 18px;
+                font-family: "mon-medium";
+                color: var(--blue-color);
+                margin-bottom: 6px;
+                margin-top: 0px;
+                span {
+                    font-size: 16px;
+                    margin-top: 1px;
+                }
+            }
+            .duration-text,
+            .description {
+                font-size: 14px;
+                font-family: "mon-regular";
+                color: var(--ion-color-dark-blue);
+                margin: 5px 0px 0px 0px;
+                .circle-icon {
+                    color: var(--pink-color);
+                    font-size: 7px;
+                    margin: 0px 6px;
+                }
+            }
+        }
+        .total-section {
+            margin: 40px 0px 20px;
+            padding: 7px 16px;
+            background: var(--ion-color-dark-blue2);
+            border-radius: 25px;
+            .total-label {
+                color: var(--blue-color);
+                font-family: "Fivo_sans_medium_oblique";
+            }
+            .duration-text {
+                color: var(--blue-color);
+                font-family: "Fivo_sans_oblique";
+                font-size: 14px;
+            }
+            .amount-text {
+                font-size: 14px;
+                font-family: "Fivo_sans_medium";
+                color: var(--blue-color);
+                width: fit-content;
+                float: right;
+                margin-top: -23px;
+            }
+        }
+    }
+}
+
+.salon-closed {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 32%;
+}
+
+.cn_div {
+    display: flex;
+    align-items: normal;
+    width: 83%;
+}

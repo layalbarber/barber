@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="md">
+        <ion-buttons slot="start" (click)="closeModal()">
+            <ion-button>
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>{{'addAddress.title' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="main-container ion-padding">
+        <div id="map"></div>
+        <form #f="ngForm">
+            <div class="input-section">
+                <ion-input input-text [(ngModel)]="street" name="building"
+                    placeholder="{{'addAddresss.stret' | translate}}" type="text" required>
+                </ion-input>
+                <span *ngIf="streetErrr">{{streetErrr}}</span>
+                <ion-input input-text [(ngModel)]="city" name="street" placeholder="{{'addAddresss.city' | translate}}"
+                    type="text" required>
+                </ion-input>
+                <span *ngIf="cityErr">{{cityErr}}</span>
+                <ion-input input-text [(ngModel)]="state" name="city" placeholder="{{'addAddresss.state' | translate}}"
+                    type="text" required>
+                </ion-input>
+                <span *ngIf="stateErr">{{stateErr}}</span>
+                <ion-input input-text [(ngModel)]="country" name="zipcode"
+                    placeholder="{{'addAddresss.Country' | translate}}" type="text" required>
+                </ion-input>
+                <span *ngIf="countryErr">{{countryErr}}</span>
+            </div>
+        </form>
+    </div>
+    {{address}}
+</ion-content>
+<ion-footer>
+    <ion-button class="otp_btn" mode="md" expand="block" color="var(--pink-color)" (click)="saveAddress()">
+        {{'addAddress.Save' | translate}}
+    </ion-button>
+</ion-footer>

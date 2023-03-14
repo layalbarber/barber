@@ -1,0 +1,32 @@
+<ion-app>
+    <ion-menu style="margin-top: 44px;" side="start" menuId="first" contentId="main">
+        <ion-header>
+            <ion-toolbar [hidden]="token == ''">
+                <div>
+                    <p (click)="profile()">{{'menu.hi' | translate}} !, {{profilee.name}}</p>
+                </div>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content mode="ios" class="ion-padding">
+            <div class="btn_div">
+                <p (click)="offers()">{{'menu.offes' | translate}}</p>
+                <p (click)="terms()">{{'menu.terms' | translate}}</p>
+                <p (click)="privacy()">{{'menu.privacy' | translate}}</p>
+                <p (click)="presentModal()">{{'menu.invites' | translate}}</p>
+                <p [hidden]="token == ''" (click)="logout()">{{'menu.logout' | translate}}</p>
+
+                <ion-item lines="none">
+                    <ion-label>{{'SelectLanguage.label' | translate}}</ion-label>
+                    <ion-select placeholder="Select One" [(ngModel)]="languages"
+                        cancelText="{{'SelectLanguage.Cancel' | translate}}"
+                        okText="{{'SelectLanguage.ok' | translate}}" [interfaceOptions]="option"
+                        (ionChange)="languageChanged()" [routerLink]="['/tabs/home']">
+                        <ion-select-option value="en">{{'SelectLanguage.english' | translate}}</ion-select-option>
+                        <ion-select-option value="ar">{{'SelectLanguage.arabic' | translate}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </div>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

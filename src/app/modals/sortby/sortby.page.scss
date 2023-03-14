@@ -1,0 +1,197 @@
+ion-checkbox {
+    --background: #DDDDDD;
+    --background-checked: var(--pink-color);
+    --border-color-checked: white;
+    --border-color: white;
+    --border-radius: 7px;
+    --size: 19px;
+    --checkmark-color: white;
+    --checkmark-width: 2px;
+}
+
+ion-label {
+    font-size: 13px;
+    font-family: mon-medium;
+    color: var(--input-text-color);
+    margin-left: 14px;
+}
+
+h2 {
+    font-size: 16px;
+    font-family: mon-semibold;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.gender-section {
+    padding-bottom: 20px;
+    .title {
+        margin-bottom: 0px;
+    }
+    ion-label {
+        color: var(--input-text-color);
+        font-family: 'mon-medium';
+    }
+    ion-radio {
+        --border-width: 1px;
+        --color: var(--input-text-color);
+        --color-checked: var(--pink-color);
+        margin-right: 5px;
+    }
+    .active {
+        font-size: 16px;
+        font-family: 'mon-medium';
+        color: var(--input-text-color);
+    }
+    .inactive {
+        font-size: 16px;
+        font-family: 'mon-medium';
+        color: var(--input-text-color);
+    }
+}
+
+.booking-slot-div {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    .slot {
+        padding: 3px 0px 4px;
+        width: auto;
+        text-align: center;
+        border: 1.5px solid var(--input-color);
+        font-size: 10px;
+        padding: 9px 0px 7px;
+        color: var(--input-text-color);
+        font-family: "mon-medium";
+        border-radius: 2px;
+        border-radius: 7px;
+    }
+    .active {
+        color: var(--pink-color);
+        border-radius: 7px;
+        font-size: 10px;
+        font-family: mon-medium;
+        border: 1.5px solid var(--pink-color);
+    }
+    .btn_div {
+        height: 60px;
+        display: inline-block;
+        margin-bottom: 10px;
+        ion-button {
+            min-width: 50px;
+            max-width: 117px;
+            height: 34px !important;
+            --border-radius: 5px;
+            font-size: 15px;
+            margin-right: 10px;
+            font-family: mon-medium;
+            align-self: center;
+            --box-shadow: none;
+        }
+        .active {
+            --background: none;
+            border-radius: 7px;
+            --background-activated: white;
+            border: 2px solid var(--pink-color);
+            --color: var(--pink-color);
+            color: var(--pink-color);
+        }
+        .segment_btn {
+            --background: var(--ion-color-white);
+            --background-activated: var(--input-color);
+            --color: var(--input-text-color);
+            border: 1px solid var(--input-text-color);
+            border-radius: 5px;
+        }
+    }
+}
+
+.rating-section {
+   
+    ion-icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+    }
+    .yellow-star {
+        color: var(--star-color);
+    }
+    .gray-star {
+        color: var(--input-text-color);
+    }
+    .count-rating {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 7px;
+        font-size: 14px;
+        font-family: 'mon-medium';
+        color: var(--input-text-color);
+    }
+}
+
+.distance-section {
+    padding-bottom: 25px;
+    position: relative;
+    .title {
+        margin-bottom: 0px;
+    }
+    ion-item {
+        --min-height: 39px;
+        --inner-padding-end: 0px;
+    }
+    .km-label {
+        right: 0px;
+        position: absolute;
+        top: 10px;
+        z-index: 1000;
+        font-size: 14px;
+        font-family: 'mon-medium';
+        color: var(--input-text-color);
+    }
+    ion-range {
+        --knob-size: 16px;
+        --bar-height: 1.1px;
+        --knob-background: var(--pink-color);
+        --bar-background: #e4e4e4;
+        --bar-background-active: var(--pink-color);
+        --bar-border-radius: 3px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.apply {
+    height: 34px;
+    background-color: var(--pink-color);
+    margin-top: -4px;
+    border-radius: 6px;
+    width: 74px;
+    font-size: 16px;
+    font-family: mon-medium;
+}
+
+.cancel {
+    height: 34px;
+    margin-top: -4px;
+    border-radius: 6px;
+    width: 74px;
+    font-size: 16px;
+    color: var(--input-text-color);
+    font-family: mon-medium;
+}
+
+.distance {
+    background-color: var(--input-color);
+    width: 58px;
+    height: 28px;
+    border-radius: 4px;
+    color: var(--black-color);
+    font-family: mon-medium;
+    font-size: 15px;
+}
+
+.rating {
+    margin-top: 30px;
+    margin-bottom: -2px;
+}

@@ -1,0 +1,20 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start" *ngIf="token != ''">
+            <ion-menu-button class="menu" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-icon *ngIf="token == ''" name="chevron-back" (click)="back()"></ion-icon>
+        <ion-title>
+            {{'privacy.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="nodata" *ngIf="data == null">
+        <img src="../../../assets/general_images/no-data-icon-10.jpg" alt="">
+    </div>
+
+    <div class="terms" [innerHTML]="data"></div>
+
+</ion-content>

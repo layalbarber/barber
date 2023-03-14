@@ -1,0 +1,144 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button mode="md" defaulthref="" text="" icon="chevron-back" (click)="back()"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'BookAppointment.book' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <h1>{{'BookAppointment.confirm' | translate}}</h1>
+    <div class="confirmation-div">
+        <ion-row>
+            <ion-col size="3.5">
+                <img src="{{confirm?.imagePath + confirm?.image}}" height="70" width="70">
+            </ion-col>
+            <ion-col size="8.5">
+                <p class="title">{{confirm?.name}}</p>
+                <p class="address">
+                    {{confirm?.address}},{{confirm?.city}}-{{confirm?.zipcode}},{{confirm?.state}},{{confirm?.country}}
+                </p>
+                <p class="p">
+                    <ion-icon name="star"></ion-icon>
+                    {{confirm?.rate}}
+                    <span *ngIf="res == 'thursday' && confirm?.thursday?.open != null">{{confirm?.thursday?.open}}
+                        -
+                        {{confirm?.thursday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'friday' && confirm?.friday?.open != null">{{confirm?.friday?.open}}
+                        -
+                        {{confirm?.friday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'saturday' && confirm?.saturday?.open != null">{{confirm?.saturday?.open}}
+                        -
+                        {{confirm?.saturday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'sunday' && confirm?.sunday?.open != null">{{confirm?.sunday?.open}}
+                        -
+                        {{confirm?.sunday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'monday' && confirm?.monday?.open != null">{{confirm?.monday?.open}}
+                        -
+                        {{confirm?.monday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'tuesday' && confirm?.tuesday?.open != null">{{confirm?.tuesday?.open}}
+                        -
+                        {{confirm?.tuesday?.close}}
+                    </span> &nbsp;
+                    <span *ngIf="res == 'wednesday' && confirm?.wednesday?.open != null">{{confirm?.wednesday?.open}}
+                        -
+                        {{confirm?.wednesday?.close}}
+                    </span> &nbsp;
+                    <ion-text class="ion-float-right"><img src="../../assets/general_images/location.png">
+                        <ion-text class="location">&nbsp;{{distance | number:'2.2-2'}} Km
+                        </ion-text>
+                    </ion-text>
+                </p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <h1 class="ion-margin-top" style="margin-left: 0px;">{{'BookAppointment.selected' | translate}}</h1>
+    <h2 *ngFor="let l of localStorageData">{{l.name}}
+        <span class="ion-float-right" *ngIf="language == 'en'">{{currency}}{{l.price}}</span>
+        <span class="ion-float-right" *ngIf="language == 'ro'">{{currency}}{{l.price}}</span>
+        <span class="ion-float-left" *ngIf="language == 'ar'">{{currency}}{{l.price}}</span>
+    </h2>
+    <hr>
+    <h2 *ngIf="language == 'en'">{{'BookAppointment.discount' | translate}}
+        <span *ngIf="dis > 0 " class="ion-float-right">{{currency}}{{dis}}</span>
+        <span *ngIf="dis == 0" class="ion-float-right">
+            0
+        </span>
+    </h2>
+    <h2 *ngIf="language == 'ro'">{{'BookAppointment.discount' | translate}}
+        <span *ngIf="dis > 0 " class="ion-float-right">{{currency}}{{dis}}</span>
+        <span *ngIf="dis == 0" class="ion-float-right">
+            0
+        </span>
+    </h2>
+    <h2 *ngIf="language == 'ar'">{{'BookAppointment.discount' | translate}}
+        <span *ngIf="dis > 0 " class="ion-float-left">{{currency}}{{dis}}</span>
+        <span *ngIf="dis == 0" class="ion-float-left">
+            0
+        </span>
+    </h2>
+    <h2 *ngIf="serviseAt =='Home'">{{'BookAppointment.extracharge' | translate}}
+        <span class="ion-float-right" *ngIf="language == 'en'">{{currency}}{{extra_charge}}</span>
+        <span class="ion-float-right" *ngIf="language == 'ro'">{{currency}}{{extra_charge}}</span>
+        <span class="ion-float-left" *ngIf="language == 'ar'">{{currency}}{{extra_charge}}</span>
+    </h2>
+    <h2>{{'BookAppointment.total' | translate}}
+        <span class="ion-float-right totalcolor" *ngIf="language == 'en'">{{currency}}{{totalPrice}}</span>
+        <span class="ion-float-right totalcolor" *ngIf="language == 'ro'">{{currency}}{{totalPrice}}</span>
+        <span class="ion-float-left totalcolor" *ngIf="language == 'ar'">{{currency}}{{totalPrice}}</span>
+    </h2>
+    <div class="coupen-div">
+        <p>{{'BookAppointment.coupon' | translate}}<span class="ion-float-right"
+                (click)="presentModalPayment()">{{'BookAppointment.Clickhere' | translate}}</span>
+        </p>
+    </div>
+
+    <h1 style="margin-left: 0px;">{{'BookAppointment.payment' | translate}}</h1>
+    <ion-radio-group value="CASH" (ionChange)="mcqAnswer($event)">
+        <p *ngIf="paymentGateway == 1">{{'BookAppointment.CashPay' | translate}}<span class="ion-float-right"
+                *ngIf="language == 'en'">
+                <ion-radio mode="md" value="CASH"></ion-radio>
+            </span>
+            <span class="ion-float-right" *ngIf="language == 'ro'">
+                <ion-radio mode="md" value="CASH"></ion-radio>
+            </span>
+            <span class="ion-float-right check" *ngIf="language == 'ar'">
+                <ion-radio mode="md" value="CASH"></ion-radio>
+            </span>
+        </p>
+
+        <p *ngIf="paymentGateway2 == 1"><img src="../../../assets/payment_method/stripe.png" style="border: 50%;"><span
+                class="ion-float-right" *ngIf="language == 'en'">
+                <ion-radio mode="md" value="STRIPE"></ion-radio>
+            </span>
+            <span class="ion-float-right" *ngIf="language == 'ro'">
+                <ion-radio mode="md" value="STRIPE"></ion-radio>
+            </span>
+            <span class="ion-float-right check" *ngIf="language == 'ar'">
+                <ion-radio mode="md" value="STRIPE"></ion-radio>
+            </span>
+        </p>
+    </ion-radio-group>
+    <ion-row *ngIf="radio == 'STRIPE'" class="ion-margin-top">
+        <ion-col>
+            <form action="/" method="post" id="payment-form">
+                <div class="form-row">
+                    <div id="element"></div>
+                    <div id="card-errors" role="alert"></div>
+                </div>
+                <ion-button [hidden]="btnChecked == false" class="ion-margin-top btn-pay" type="submit" color="#E06287"
+                    expand="full">{{'BookAppointment.make' | translate}}</ion-button>
+            </form>
+        </ion-col>
+    </ion-row>
+    <ion-button *ngIf="radio == 'CASH' && paymentGateway == 1" [hidden]="btnChecked == false" expand="full"
+        class="cashpay" mode="md" (click)="payment_done()" color="var(--pink-color)">{{'BookAppointment.CashPay' |
+        translate}}</ion-button>
+</ion-content>

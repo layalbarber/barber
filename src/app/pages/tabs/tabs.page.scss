@@ -1,0 +1,18 @@
+ion-tabs {
+    ion-tab-bar {
+        --background: var(--pink-color);
+        --border: none;
+        ion-tab-button {
+            ion-icon {
+                height: 20px;
+                width: 20px;
+                color: white;
+            }
+            .calendar-icon {
+                height: 23px;
+                width: 23px;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

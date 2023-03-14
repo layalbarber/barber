@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'offers.Offers' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content mode="ios" class="ion-padding">
+    <ion-refresher slot="fixed" mode="md" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="crescent"></ion-refresher-content>
+    </ion-refresher>
+    <div class="nodataa" *ngIf="slider?.length == 0 && coupon?.length == 0">
+        <img src="../../assets/general_images/no-data-icon-10.jpg">
+    </div>
+    <div *ngIf="slider?.length >= 0 && coupon?.length >= 0">
+        <div class="slidecontainer">
+            <ion-slides pager="true" [options]="slideOpts">
+                <ion-slide *ngFor="let l of slider">
+                    <div class="slide">
+                        <img src="{{l.imagePath + l.image}}" width="100%" height="100%">
+                        <div class="dark-layer">
+                            <div class="discount">
+                                <p>{{l.title}}</p>
+                                <h3>{{l.discount}}%</h3>
+                                <p>Is Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+        <ion-row *ngFor="let c of coupon" class="coupen-div ion-margin-top">
+            <ion-col size="4" class="col-first">
+                <h1 *ngIf="c.type == 'Percentage' ">{{c.discount}}<span>%</span></h1>
+                <h1 *ngIf="c.type == 'Amount'"><span>{{currency}}</span>{{c.discount}}</h1>
+            </ion-col>
+            <ion-col size="8" class="col-second" style="padding-left: 14px;">
+                <p class="coupen-code"> {{c.code}}</p>
+                <p class="coupen-message">
+                    <ion-row>
+                        <ion-col size="8" class="ion-no-padding">
+                            {{c.desc}}
+                        </ion-col>
+                    </ion-row>
+                </p>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

@@ -1,0 +1,162 @@
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+.nodataa {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    img {
+        height: 130px;
+    }
+}
+
+ion-header {
+    ion-toolbar {
+        --padding-start: 10px;
+        --padding-end: 10px;
+
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-bold;
+        }
+
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+
+        .menu {
+            color: black;
+        }
+
+        .search {
+            margin-right: 13px;
+        }
+    }
+}
+
+ion-content {
+    .slidecontainer {
+        .discount {
+            margin-top: 31px;
+
+            p {
+                font-size: 13px;
+                color: white;
+                font-family: mon-semibold;
+            }
+
+            h3 {
+                color: white;
+                font-size: 50px;
+                font-family: mon-black;
+                margin: -5px;
+            }
+        }
+
+        .dark-layer {
+            width: 100%;
+            height: 100%;
+        }
+
+        margin-top: 15px;
+
+        .slide {
+            height: 175px;
+            width: 100%;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.164);
+
+            img {
+                border-radius: 10px;
+                opacity: 3;
+                display: block;
+                width: 100%;
+            }
+
+            .dark-layer {
+                background: rgba(0, 0, 0, 0.5);
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0px;
+                border-radius: 10px;
+                left: 0px;
+            }
+        }
+    }
+
+    $colors: (#FFB5CC, #B5B8FF, #FFB5B5);
+
+    @for $i from 1 through length($colors) {
+        .coupen-div:nth-child(#{length($colors)}n + #{$i}) {
+            @include background-opacity(nth($colors, $i), 0.5);
+
+            .col-first {
+                background: nth($colors, $i) !important;
+                opacity: 2 !important;
+            }
+
+            ion-button {
+                color: nth($colors, $i) !important;
+            }
+        }
+    }
+
+    .coupen-div {
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        ion-button {
+            width: 61px;
+            height: 27px;
+            background-color: white;
+            font-size: 14px;
+            font-family: mon-medium;
+            color: var(--pink-color);
+            border-radius: 4px;
+            position: absolute;
+            top: 26%;
+            right: 15px;
+        }
+
+        .col-first {
+            height: 80px;
+            width: 75px;
+            opacity: 1;
+            border-radius: 10px;
+            text-align: center;
+
+            h1 {
+                font-size: 25px;
+                font-family: mon-bold;
+            }
+        }
+
+        .col-second {
+            border-radius: 7px;
+
+            .coupen-code {
+                margin: 0px;
+                margin-top: 7px;
+                font-size: 14px;
+                font-family: mon-bold;
+                color: white;
+            }
+
+            .coupen-message {
+                margin: 0px;
+                margin-top: 4px;
+                font-size: 12px;
+                font-family: mon-regular;
+                color: white;
+            }
+        }
+    }
+}

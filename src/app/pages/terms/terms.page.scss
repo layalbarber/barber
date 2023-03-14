@@ -1,0 +1,38 @@
+ion-header {
+    ion-toolbar {
+        --padding-start: 10px;
+        --padding-end: 10px;
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-bold;
+        }
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+        .menu {
+            color: var(--black-color);
+        }
+    }
+}
+
+.nodata {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    img {
+        height: 130px;
+    }
+}
+
+.terms {
+    font-size: 14px;
+    font-family: mon-regular;
+    color: var(--input-text-color);
+    text-align: justify;
+    margin-bottom: 40px;
+    margin-top: 5px;
+}

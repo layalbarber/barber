@@ -1,0 +1,322 @@
+ion-header {
+    ion-toolbar {
+        ion-title {
+            font-size: 14px;
+            color: var(--black-color);
+            font-family: mon-bold;
+        }
+
+        ion-icon {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+
+        .menu {
+            color: var(--black-color);
+        }
+
+        .search {
+            margin-right: 13px;
+        }
+
+        .broser {
+            margin-right: 13px;
+        }
+    }
+}
+
+ion-content {
+
+    .err {
+        font-size: 13px;
+        color: var(--pink-color);
+        font-family: mon-medium;
+    }
+
+    .nodataa {
+        position: absolute;
+        top: 37%;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        img {
+            height: 130px;
+        }
+    }
+
+    .edit_icon {
+        color: var(--ion-color-primary-contrast);
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .edit_div {
+        background: var(--blue-color);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .profile_div {
+        padding: 20px;
+        box-shadow: 0px 0px 7px 1px #cccccc;
+
+        ion-item {
+            --inner-padding-end: 0px !important;
+            --padding-end: 0px !important;
+
+            .img {
+                margin-right: 10px;
+                border-radius: 50%;
+            }
+
+            ion-label {
+                font-size: 16px;
+                font-family: mon-bold;
+                margin-right: 10px;
+            }
+        }
+
+        .btn {
+            height: 30px;
+        }
+    }
+
+    h1 {
+        font-size: 20px;
+        font-family: mon-bold;
+        margin-top: 23px;
+    }
+
+    .upcoming {
+        height: auto;
+        border: 2px solid #eeeeee;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+
+        h1 {
+            margin: 0px;
+        }
+
+        .address {
+            margin: 0;
+            font-size: 12px;
+            font-family: mon-medium;
+            margin-top: 4px;
+        }
+
+        .rating {
+            font-size: 10px;
+            color: var(--input-text-color);
+            font-family: mon-medium;
+
+            ion-icon {
+                font-size: 12px;
+                color: var(--star-color);
+            }
+
+            .img1 {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        hr {
+            border: 1px dashed #eeeeee;
+            width: 86%;
+            margin-top: -5px;
+        }
+
+        .service {
+            font-size: 12px;
+            color: var(--input-text-color);
+            font-family: mon-medium;
+            margin-top: 14px;
+            margin-left: 1px;
+            margin: 0px;
+        }
+
+        .see {
+            margin: 0px;
+            font-size: 12px;
+            font-family: mon-medium;
+            color: var(--blue-color);
+            margin-top: 4px;
+        }
+
+        ion-label {
+            font-size: 12px;
+            font-family: mon-medium;
+
+            ion-button {
+                height: 18px;
+                font-size: 12px;
+                font-family: mon-medium;
+                color: var(--ion-color-danger);
+            }
+
+            img {
+                margin-right: 9px;
+            }
+        }
+    }
+
+    .history {
+        height: auto;
+        border: 2px solid #eeeeee;
+        border-radius: 20px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+
+        h1 {
+            margin: 0px;
+        }
+
+        .address {
+            margin: 0;
+            font-size: 12px;
+            font-family: mon-medium;
+            margin-top: 4px;
+        }
+
+        .rating {
+            font-size: 10px;
+            color: var(--input-text-color);
+            font-family: mon-medium;
+
+            ion-icon {
+                font-size: 12px;
+                color: var(--star-color);
+            }
+
+            .img1 {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        hr {
+            border: 1px dashed #eeeeee;
+            width: 86%;
+            margin-top: -5px;
+        }
+
+        .service {
+            font-size: 12px;
+            color: var(--input-text-color);
+            font-family: mon-medium;
+            margin-top: 14px;
+            margin-left: 1px;
+            margin: 0px;
+        }
+
+        .see {
+            margin: 0px;
+            font-size: 12px;
+            font-family: mon-medium;
+            color: var(--blue-color);
+            margin-top: 4px;
+        }
+
+        ion-label {
+            font-size: 12px;
+            font-family: mon-medium;
+
+            ion-button {
+                height: 18px;
+                font-size: 12px;
+                font-family: mon-medium;
+                color: var(--ion-color-success);
+            }
+
+            img {
+                margin-right: 9px;
+            }
+        }
+    }
+
+    .pontlabel {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+
+    .reffercon {
+        font-size: 13px;
+        color: cornflowerblue;
+        text-align: justify;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .reffralcont {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .pass_item {
+        --background: var(--input-color);
+        border-radius: 7px;
+        --border-color: none;
+        --padding-start: 0px;
+        --inner-border-width: 0px 0px 0px 0px;
+        margin-top: 4px;
+    }
+
+    .trans-btn {
+        opacity: 1;
+        color: var(--black-color);
+        font-size: 20px;
+    }
+
+    .input-div {
+        p {
+            margin: 0px;
+            font-size: 12px;
+            font-family: mon-medium;
+            color: var(--input-text-color);
+            margin-left: 24px;
+            margin-top: 13px;
+        }
+
+        .pointInp {
+            background: var(--input-color);
+            text-align: center;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            margin-top: 4px;
+            width: auto;
+        }
+
+        .pointInps {
+            background: var(--input-color);
+            text-align: center;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            margin-top: 4px;
+            width: auto;
+        }
+
+        ion-input {
+            --background: var(--input-color);
+            border-radius: 7px;
+            --padding-start: 16px;
+            --color: var(--black-color);
+            font-size: 15px;
+            width: 100%;
+            font-family: "mon-medium";
+        }
+    }
+}
+
+.pass {
+    color: var(--input-color);
+    font-family: mon-medium;
+    font-size: 16px;
+    --border-radius: 10px;
+    margin-top: 20px;
+    height: 39px;
+}

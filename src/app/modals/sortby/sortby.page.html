@@ -1,0 +1,31 @@
+<ion-content mode="ios" class="ion-padding">
+    <h2>{{'SortBy.sort' | translate}}</h2>
+    <h2>{{'SortBy.look' | translate}}</h2>
+    <div class="gender-section">
+        <ion-radio-group (ionChange)="changeGenderValue($event)" value="select">
+            <ion-row class="ion-no-padding">
+                <ion-col *ngFor="let g of ('gender' | translate)" class="ion-no-padding">
+                    <ion-item class="ion-no-padding" lines="none">
+                        <ion-label class="active">{{g?.label}}</ion-label>
+                       
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-radio-group>
+    </div>
+
+    <h2>{{'SortBy.Categories' | translate}}</h2>
+
+    <div class="booking-slot-div">
+        <div class="btn_div">
+            <ion-button (click)="btnChanged(c.cat_id)" value="c.name" *ngFor="let c of catagories" class="ion-text-capitalize" [ngClass]="selectBtn == c.cat_id ? 'active' : 'segment_btn'">
+                {{c.name}}
+            </ion-button>
+        </div>
+    </div>
+    <div class="ion-text-end">
+        <ion-button fill="clear" (click)="close()" class="cancel">{{'SortBy.Cancel' | translate}}</ion-button>
+        <ion-button color="var(--pink-color)" (click)="close()" class="apply">{{'SortBy.Apply' | translate}}</ion-button>
+    </div>
+
+</ion-content>

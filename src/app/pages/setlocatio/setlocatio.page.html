@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start" (click)="back()">
+            <ion-button fill="clear">
+                <ion-icon name="chevron-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>
+            {{'setLocation.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+    <ion-row class="ion-padding-start ion-padding-end ion-margin-right" id="map">
+        <ion-col size="11" class="addresscol">
+            <ion-item class="ion-no-padding" lines="none">
+                <input autofocus="true" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places"
+                    (onAddressChange)="handleAddressChange($event)">
+                <ion-icon name="search" slot="end"></ion-icon>
+            </ion-item>
+        </ion-col>
+        <ion-col size="1">
+            <ion-icon class="icon" src="../../../assets/icon/Group 6691.svg"></ion-icon>
+        </ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-refresher slot="fixed" mode="md" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="crescent"></ion-refresher-content>
+    </ion-refresher>
+    <div class="popular_div">
+        <h1>{{'setLocation.popular' | translate}}</h1>
+        <p *ngFor="let item of popularLocationData">{{item.name}}</p>
+    </div>
+
+    <div class="ion-margin-top search_result ">
+        <ion-text>{{'setLocation.search' | translate}} </ion-text>
+    </div>
+    <div class="destination">
+        <ion-row class="result" *ngFor="let item of addressDetail" (click)="presentModal(item)">
+            <ion-col size="12 ">
+                <p>
+                    <img src="../../../assets/icon/location.png ">
+                    <span class="ion-float-right "></span> {{item.name}}<br>
+                </p>
+                <h4>{{item.address}}</h4>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

@@ -1,0 +1,83 @@
+ion-header {
+    ion-icon {
+        font-size: 20px;
+        color: var(--black-color);
+        font-weight: bold;
+        font-family: mom-bold;
+    }
+    ion-title {
+        font-family: mon-bold;
+        font-size: 14px;
+        color: var(--black-color);
+    }
+}
+
+ion-content {
+    .heading {
+        margin-top: 130px;
+        p {
+            margin-top: -8px;
+            font-family: mon-medium;
+            font-size: 14px;
+            color: var(--black-color);
+        }
+        h2 {
+            margin-top: 18px;
+            font-size: 20px;
+            font-family: mon-bold;
+            text-transform: uppercase;
+            color: var(--black-color);
+        }
+        .time {
+            margin-top: 3.3pc;
+            font-family: mon-medium;
+            font-size: 20px;
+            color: var(--input-text-color);
+        }
+    }
+    .top {
+        margin-top: 33px;
+        ion-input {
+            background-color: var(--input-color);
+            height: 62px;
+            font-family: mon-medium;
+            --placeholder-opacity: 1;
+            width: 62px;
+            font-size: 20px;
+            color: var(--input-text-color);
+            text-align: center;
+            --padding-start: 7px;
+            border-radius: 8px;
+        }
+    }
+    .next {
+        margin-top: 16px;
+        ion-button {
+            height: 40px;
+            border-radius: 9px;
+            font-size: 16px;
+            margin-top: 7px;
+            overflow: hidden;
+            text-transform: none;
+            font-family: mon-medium;
+            background-color: var(--pink-color);
+        }
+    }
+    .otp {
+        margin-top: 14px;
+        ion-text {
+            font-size: 12px;
+            color: var(--black-color);
+            font-family: mon-medium;
+            span {
+                color: var(--pink-color);
+                font-size: 12px;
+                font-family: mon-bold;
+            }
+        }
+    }
+}
+
+.otp-fill {
+    border-bottom: 1px solid var(--pink-color);
+}

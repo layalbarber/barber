@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" slot="start" fill="clear">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-searchbar class="searchbar" [(ngModel)]="search" (ionChange)="searchApi($event)"
+            (ionCancel)="searchApi($event)"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-row class="address">
+        <ion-col size="12">
+            <p class="search-result" *ngIf="input == 1">
+                <span *ngIf="data.length >= 1">{{'searchResulePage.resule' | translate}} ({{data.length}})</span>
+            </p>
+        </ion-col>
+    </ion-row>
+
+    <div class="salon-cards" *ngIf="input == 1">
+        <ion-row class="salon-list" *ngFor="let item of data">
+            <ion-col size="2.9">
+                <img src="{{item.imagePath + item.image}} " height="70px " width="70px ">
+            </ion-col>
+            <ion-col size="9.1" class="col-border">
+                <h3>{{item.name}}</h3>
+                <ion-row>
+                    <ion-col size="9.5" class="ion-no-padding col-pad ">
+                        <ion-text class="address">{{item.address}}
+                        </ion-text>
+                    </ion-col>
+                </ion-row>
+                <p class="p">
+                    <ion-icon name="star"></ion-icon> {{item.rate}}
+                    <ion-text class="ion-float-right "><img src="../../assets/general_images/location.png ">
+                        <ion-text class="location ">&nbsp;{{item.distance | number:'2.2-2'}} {{'searchResulePage.km' |
+                            translate}}</ion-text>
+                    </ion-text>
+                </p>
+                <ion-button *ngIf="language == 'en'" class="right" (click)="book(item?.salon_id) " mode="md "
+                    color="var(--pink-color) ">{{'searchResulePage.book' | translate}}</ion-button>
+                <ion-button *ngIf="language == 'ro'" class="right" (click)="book(item?.salon_id) " mode="md "
+                    color="var(--pink-color) ">{{'searchResulePage.book' | translate}}</ion-button>
+                <ion-button *ngIf="language == 'ar'" class="left" (click)="book(item?.salon_id) " mode="md "
+                    color="var(--pink-color) ">{{'searchResulePage.book' | translate}}</ion-button>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <div class="nodata_img" *ngIf="data.length == 0 || input == 0">
+        <img src="../../../assets/general_images/no-data-icon-10.jpg" class="nodataimg">
+    </div>
+</ion-content>

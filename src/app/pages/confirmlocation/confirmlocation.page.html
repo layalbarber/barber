@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" fill="clear" slot="start">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>
+            {{'confirm.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content mode="ios">
+    <agm-map [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true" [zoom]="zoom">
+        <agm-direction [origin]="origin" [destination]="destination" [renderOptions]="renderOptions"
+            [markerOptions]="markerOptions">
+        </agm-direction>
+    </agm-map>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-toolbar class="ion-padding-start ion-padding-end ion-padding-bottom">
+        <p class="title">{{'confirm.destination' | translate}}</p>
+        <div class="salon-destination">
+            <ion-row style="margin: -8px;">
+                <ion-col size="3">
+                    <img src="{{singlesalon?.imagePath + singlesalon?.image}}" alt="No Image Found" height="70"
+                        width="70">
+                </ion-col>
+                <ion-col size="9">
+                    <h2>{{singlesalon?.name}}</h2>
+                    <ion-text class="ad">{{singlesalon?.address | slice:0:25}}
+                        <span *ngIf="singlesalon?.address.length >= 15">...</span>
+                    </ion-text>
+                    <p class="p">
+                        <ion-icon name="star"></ion-icon> {{singlesalon?.rate}}
+                        <span *ngIf="res == 'thursday'">{{singlesalon?.thursday?.open}} -
+                            {{singlesalon?.thursday?.close}} </span> &nbsp;
+                        <span *ngIf="res == 'friday'">{{singlesalon?.friday?.open}} - {{singlesalon?.friday?.close}}
+                        </span> &nbsp;
+                        <span *ngIf="res == 'saturday'">{{singlesalon?.saturday?.open}} -
+                            {{singlesalon?.saturday?.close}} </span> &nbsp;
+                        <span *ngIf="res == 'sunday'">{{singlesalon?.sunday?.open}} - {{singlesalon?.sunday?.close}}
+                        </span> &nbsp;
+                        <span *ngIf="res == 'monday'">{{singlesalon?.monday?.open}} - {{singlesalon?.monday?.close}}
+                        </span> &nbsp;
+                        <span *ngIf="res == 'tuesday'">{{singlesalon?.tuesday?.open}} - {{singlesalon?.tuesday?.close}}
+                        </span> &nbsp;
+                        <span *ngIf="res == 'wednesday'">{{singlesalon?.wednesday?.open}} -
+                            {{singlesalon?.wednesday?.close}} </span> &nbsp;
+                        <ion-text class="ion-float-right main"><img src="../../assets/general_images/location.png">
+                            <ion-text class="location">&nbsp;{{distance | number:'2.1-2'}} {{'confirm.destination' |
+                                translate}}</ion-text>
+                        </ion-text>
+                    </p>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-toolbar>
+</ion-footer>

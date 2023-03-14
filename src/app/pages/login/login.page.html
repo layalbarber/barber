@@ -1,0 +1,89 @@
+<ion-content mode="ios">
+    <div class="dark-layer">
+        <div class="container">
+            <img src="{{imagePath + imagee}}" height="90px" width="195px">
+        </div>
+        <form #f="ngForm">
+            <ion-row class=" ion-padding-start ion-padding-end ion-margin-start ion-margin-end">
+                <ion-col size="12">
+                    <ion-input [(ngModel)]="inputData.email" name="email" required="true"
+                        placeholder="{{'signup.EmailID' | translate}}"></ion-input>
+
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-start ion-padding-end ion-margin-start ion-margin-end">
+                <ion-col size="12">
+                    <span class="err" *ngIf="errors">
+                        {{errors}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end ion-margin-start ion-margin-end">
+                <ion-col size="12" class="pass_col">
+                    <ion-item class="pass_item">
+                        <ion-input [(ngModel)]="inputData.password" name="password" required="true"
+                            [type]="passwordType" clearOnEdit="false" placeholder="{{'signup.password' | translate}}">
+                        </ion-input>
+                        <ion-icon item-end [name]="passwordIcon" class="trans-btn" (click)='hideShowPassword()'>
+                        </ion-icon>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-start ion-padding-end ion-margin-start ion-margin-end ion-padding-bottom"
+                *ngIf="errall">
+                <ion-col size="12">
+                    <span class="err" *ngIf="errall">
+                        {{errall}}
+                    </span>
+                </ion-col>
+            </ion-row>
+
+        </form>
+        <ion-row class="ion-padding-start ion-padding-end ion-margin-start ion-margin-end">
+            <ion-col size="12">
+                <span class="err" *ngIf="passwordd">
+                    {{passwordd}}
+                </span>
+                <ion-text *ngIf="language == 'en'" class="ion-float-right" (click)="forgot()">
+                    {{'login.forgotPassword' |
+                    translate}}</ion-text>
+                <ion-text *ngIf="language == 'ro'" class="ion-float-right" (click)="forgot()">
+                    {{'login.forgotPassword' |
+                    translate}}</ion-text>
+                <ion-text *ngIf="language == 'ar'" class="ion-float-left" (click)="forgot()">
+                    {{'login.forgotPassword' |
+                    translate}}</ion-text>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-padding-start ion-padding-end btn_row">
+            <ion-col size="12">
+                <ion-button mode="md" expand="full" (click)="home()" class="login">
+                    {{'login.login' | translate}}</ion-button>
+            </ion-col>
+        </ion-row>
+        <div class="ion-text-center acc_div">
+            <ion-text>{{'login.signUp' | translate}}<span id="some_div" (click)="signUp()" class="signup">
+                    {{'login.new' | translate}}
+                </span>
+            </ion-text>
+        </div>
+
+        <div class="hr_div">
+            <h1>OR</h1>
+        </div>
+
+        <div class="social_div">
+            <div class="face_div" (click)="facebookLogin()">
+                <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+            </div>
+            <div class="face_div" (click)="googleLogin()">
+                <ion-icon name="logo-google" class="google"></ion-icon>
+            </div>
+            <div class="face_div" (click)="appleLogin()" *ngIf="plateform == 'ios'">
+                <ion-icon name="logo-apple" class="apple"></ion-icon>
+            </div>
+        </div>
+    </div>
+</ion-content>

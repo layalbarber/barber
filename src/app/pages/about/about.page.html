@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'About.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" mode="ios">
+
+    <div *ngIf="netType == 'none'" class="no-data">
+        <img src="../../../assets/general_images/no-data-icon-10.jpg" alt="No Data Found">
+    </div>
+
+    <div class="container">
+        <img src="{{imagePath + imagee}}" alt="" height="170px" width="200px">
+        <div class="ion-text-center ver">
+            <ion-text>{{app_version}}</ion-text>
+        </div>
+        <div class="copyright ion-text-center">
+            <p>{{footer1}}<br><span>{{footer2}}</span></p>
+        </div>
+    </div>
+</ion-content>

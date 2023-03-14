@@ -1,0 +1,168 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu" autohide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-icon (click)="search()" class="search" name="search" slot="end"></ion-icon>
+        <ion-icon (click)="appoint()" name="browsers-outline" slot="end"></ion-icon>
+        <ion-title>
+            {{'home.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content mode="ios" class="ion-padding">
+    <ion-refresher slot="fixed" mode="md" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingicon="arrow-dropdown" refreshingspinner="crescent"></ion-refresher-content>
+    </ion-refresher>
+
+    <div *ngIf="netType != 'none'">
+        <ion-item (click)="setLocation()" class="ion-no-padding item" lines="none">
+            <ion-icon src="../../../assets/icon/location1.svg"></ion-icon>
+            <ion-text class="addressss" *ngIf="selectAddress == null">{{'home.location' | translate}}</ion-text>
+            <ion-text class="addressss" *ngIf="selectAddress != null">{{selectAddress | slice:0:30}}</ion-text>
+        </ion-item>
+
+        <div class="slidecontainer">
+            <ion-slides mode="ios" pager="true" loop="true" [options]="slideOpts">
+                <ion-slide *ngFor="let l of banners">
+                    <div class="slide">
+                        <div class="dark-layer">
+                            <ngx-progressive-img-loader [height]="'100%'" [width]="'100%'" [placeholderBgColor]="'#ccc'"
+                                [placeholderImg]="'https://vignette.wikia.nocookie.net/the-darkest-minds/images/4/47/Placeholder.png/revision/latest/scale-to-width-down/240?cb=20160927044640'"
+                                [preserveAspectRatio]="true" [img]="l?.imagePath + l?.image"
+                                [thumbnail]="'https://picsum.photos/200/200?image='"
+                                [fallbackImg]="'https://skirtingboardsdirect.com/wp-content/uploads/2014/12/Fallback-Image-600x600.png'">
+                            </ngx-progressive-img-loader>
+                            <p>{{l?.title}}</p>
+                        </div>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+        <div *ngIf="data?.length >= 1">
+            <h1 *ngIf="language == 'en'">{{'home.AllSalon' | translate}}
+                <span (click)="allSalons()" class="ion-float-right"><img
+                        src="../../assets/saloon_images/arrow right.png"></span>
+            </h1>
+            <h1 *ngIf="language == 'ar'">{{'home.AllSalon' | translate}}
+                <span (click)="allSalons()" class="ion-float-left">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </span>
+            </h1>
+            <h1 *ngIf="language == 'ro'">{{'home.AllSalon' | translate}}
+                <span (click)="allSalons()" class="ion-float-right"><img
+                        src="../../assets/saloon_images/arrow right.png"></span>
+            </h1>
+            <div class="salonistcontainer">
+                <div class="salons" *ngFor="let item of data" (click)="book(item?.salon_id)">
+                    <ngx-progressive-img-loader [height]="'100%'" [width]="'100%'" [placeholderBgColor]="'#ccc'"
+                        [placeholderImg]="'https://vignette.wikia.nocookie.net/the-darkest-minds/images/4/47/Placeholder.png/revision/latest/scale-to-width-down/240?cb=20160927044640'"
+                        [preserveAspectRatio]="true" [img]="item?.imagePath + item?.image"
+                        [thumbnail]="'https://picsum.photos/200/200?image='"
+                        [fallbackImg]="'https://skirtingboardsdirect.com/wp-content/uploads/2014/12/Fallback-Image-600x600.png'">
+                    </ngx-progressive-img-loader>
+                    <ion-button class="btn-book" mode="md" color="var(--pink-color)">{{'home.book' | translate}}
+                    </ion-button>
+                    <ion-row no-wrap>
+                        <ion-col size="12">
+                            <div class="card_flex">
+                                <p>{{item?.name | slice:0:10}}<span *ngIf="item?.name.length >= 10">...</span></p>
+                                <span class="ion-float-right">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-text>
+                                        {{item?.rate}}</ion-text>
+                                </span>
+                            </div>
+
+                            <div class="text">
+                                <ion-text>{{item?.address | slice:0:25}}
+                                    <span *ngIf="item?.address?.length >= 15">....</span>
+                                </ion-text>
+                            </div><br>
+                            <div class="text">
+                                <ion-text>
+                                    <strong>{{'serviceAt.title' | translate}}
+                                        <span *ngIf="item?.give_service == 'Both'">{{'serviceAt.homeSalon' |
+                                            translate}}</span>
+                                        <span *ngIf="item?.give_service !== 'Both'">{{item?.give_service}}</span>
+                                    </strong>
+                                </ion-text>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="categories?.length >= 1">
+            <h1 class="arrow">{{'home.category' | translate}}</h1>
+            <div class="servicesslide">
+                <div class="service" *ngFor="let s of categories" (click)="catSalon(s?.cat_id)">
+                    <img src="{{s?.imagePath + s?.image}}" height="30" width="30"><br>
+                    <ion-text>{{s?.name}}</ion-text>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="nearBySalon?.length >= 1">
+            <h1 class="nearBy">{{'home.near' | translate}}</h1>
+            <div class="salon-cards">
+                <ion-row class="salon-list" *ngFor="let item of nearBySalon">
+                    <ion-col size="2.9">
+                        <img src="{{item?.imagePath + item?.image}}" height="70px" width="100%" class="near_img">
+                    </ion-col>
+                    <ion-col size="9.1" class="col-border">
+                        <h3>{{item?.name}}</h3>
+                        <ion-row>
+                            <ion-col size="9.5" class="ion-no-padding col-pad">
+                                <ion-text class="address">{{item?.address | slice:0:25}}
+                                    <span *ngIf="item?.address?.length >= 15">....</span>
+                                </ion-text><br>
+                                <ion-text class="address2">{{'serviceAt.title' | translate}}
+                                    <span *ngIf="item?.give_service == 'Both'">{{'serviceAt.homeSalon' |
+                                        translate}}</span>
+                                    <span *ngIf="item?.give_service !== 'Both'">{{item?.give_service}}</span>
+                                </ion-text>
+                            </ion-col>
+                        </ion-row>
+                        <p class="p">
+                            <ion-icon name="star"></ion-icon>
+                            {{item?.rate}}
+                            <span *ngIf="item?.available_now == 1">{{item?.time}}
+                            </span> &nbsp;
+                            <span class="close_tag"
+                                *ngIf="item?.available_now == 0">{{'salonProfile.close'|translate}}</span> &nbsp;
+                        </p>
+                        <ion-text *ngIf="language == 'en'" class="ion-float-right km"><img
+                                src="../../assets/general_images/location.png">
+                            <ion-text class="location">&nbsp;{{item?.distance | slice:0:3}} km
+                            </ion-text>
+                        </ion-text>
+                        <ion-text *ngIf="language == 'ar'" class="ion-float-left km"><img
+                                src="../../assets/general_images/location.png">
+                            <ion-text class="location">&nbsp;{{item?.distance | slice:0:3}} km
+                            </ion-text>
+                        </ion-text>
+                        <ion-text *ngIf="language == 'ro'" class="ion-float-right km"><img
+                                src="../../assets/general_images/location.png">
+                            <ion-text class="location">&nbsp;{{item?.distance | slice:0:3}} km
+                            </ion-text>
+                        </ion-text>
+                        <ion-button class="right" *ngIf="language == 'en' " (click)="book(item?.salon_id)" mode="md"
+                            color="var(--pink-color)">
+                            {{'home.book' | translate}}</ion-button>
+                        <ion-button class="left" *ngIf="language == 'ar' " (click)="book(item?.salon_id)" mode="md"
+                            color="var(--pink-color)">
+                            {{'home.book' | translate}}</ion-button>
+                        <ion-button class="right" *ngIf="language == 'ro' " (click)="book(item?.salon_id)" mode="md"
+                            color="var(--pink-color)">
+                            {{'home.book' | translate}}</ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+    <div class="internetconnection immm"
+        *ngIf="netType == 'none' && banners?.length == 0 && data?.length == 0 && nearBySalon?.length == 0 && categories?.length == 0">
+        <img src="../../assets/no internet connection.png">
+    </div>
+</ion-content>

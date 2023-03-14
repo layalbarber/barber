@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-button (click)="back()" fill="clear" slot="start">
+            <ion-icon name="chevron-back"></ion-icon>
+        </ion-button>
+        <ion-title>{{'verify.title' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" mode="ios">
+    <div class="ion-text-center heading">
+        <h4>{{'verify.msg' | translate}}</h4>
+        <h2>{{'verify.otp' | translate}}</h2>
+        <p>{{'verify.setOtpHere' | translate}}</p>
+        <p class="time">00:<span style="color: black;" id="some_div">{{counter}}</span></p>
+    </div>
+    <div dir="ltr" class="ion-padding-start ion-padding-end top">
+        <ion-row>
+            <ion-col size="3">
+                <ion-input name="a" type="tel" autofocus="true" maxlength="1" placeholder="0" [(ngModel)]="opt.a" #a
+                    (keyup)="moveFocus($event, b, '')"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+                <ion-input name="b" type="tel" placeholder="0" maxlength="1" [(ngModel)]="opt.b" #b
+                    (keyup)="moveFocus($event, c, a)"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+                <ion-input name="c" type="tel" placeholder="0" maxlength="1" [(ngModel)]="opt.c" #c
+                    (keyup)="moveFocus($event, d, b)"></ion-input>
+            </ion-col>
+            <ion-col size="3">
+                <ion-input name="d" type="tel" placeholder="0" maxlength="1" [(ngModel)]="opt.d" #d
+                    (keyup)="moveFocus($event, '', c)"></ion-input>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="ion-padding-start ion-padding-end next">
+        <ion-button mode="md" (click)="change()" expand="full" color="var(--pink-color)">{{'verify.next' | translate}}
+        </ion-button>
+    </div>
+    <div class="ion-text-center otp">
+        <ion-text>{{'verify.dont' | translate}}<span (click)="resend()">{{'verify.resen' | translate}}</span></ion-text>
+    </div>
+</ion-content>

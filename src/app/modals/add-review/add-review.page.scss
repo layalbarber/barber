@@ -1,0 +1,67 @@
+ion-textarea {
+    background-color: var(--input-color);
+    border-radius: 5px;
+    --color: var(--black-color);
+    --placeholder-opacity: 0.5;
+    font-family: mon-medium;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+h2 {
+    margin: 0px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-family: mon-semibold;
+    margin-bottom: 10px;
+}
+
+.active {
+    font-size: 22px;
+    margin-right: 4px;
+    color: var(--star-color);
+}
+
+ion-icon {
+    font-size: 22px;
+    color: var(--input-color);
+    margin-right: 4px;
+}
+
+.share {
+    border: 2px solid var(--pink-color);
+    font-size: 15px;
+    border-radius: 5px;
+    color: var(--pink-color);
+    font-family: mon-medium;
+    height: 42px;
+    margin-top: 24px;
+}
+
+.rating-section {
+    ion-icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+    }
+    .yellow-star {
+        color: var(--star-color);
+    }
+    .gray-star {
+        color: var(--input-text-color);
+    }
+    .count-rating {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 7px;
+        font-size: 14px;
+        font-family: 'mon-medium';
+        color: var(--input-text-color);
+    }
+}

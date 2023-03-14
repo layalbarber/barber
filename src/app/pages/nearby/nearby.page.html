@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'NearBy.near' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <agm-map [styles]="styles" [latitude]="latitude" [longitude]="longitude" [disableDefaultUI]="true" [zoom]="zoom">
+        <agm-marker *ngFor="let marker of data; let i=index" [latitude]="marker.latitude" [longitude]="marker.longitude"
+            [iconUrl]="iconUrl">
+            <agm-info-window [disableAutoPan]="false" #infoWindow [isOpen]="true">
+                <div class='agm-info-window-content'>
+                    {{marker.name}}
+                </div>
+            </agm-info-window>
+        </agm-marker>
+    </agm-map>
+    <div class="salon-slider">
+        <div class="salon-destination" *ngFor="let item of data">
+            <ion-row no-wrap class="nearby_row">
+                <ion-col size="2.5" class="salon_labelcol">
+                    <img src="{{item?.imagePath + item?.image}}" alt="No Image Found" height="70" width="70">
+                </ion-col>
+                <ion-col size="8.5" class="salon_labelcol">
+                    <ion-row class="ion-no-padding">
+                        <ion-col size="8" class="ion-no-padding">
+                            <h2 *ngIf="language == 'en'" class="ion-float-left">{{item?.name | slice:0:13}}<span
+                                    *ngIf="item?.name.length >= 13" class="ion-float-right">...</span></h2>
+                            <h2 *ngIf="language == 'ar'" class="ion-float-right">{{item?.name | slice:0:13}}<span
+                                    *ngIf="item?.name.length >= 13" class="ion-float-left">...</span></h2>
+                            <h2 *ngIf="language == 'ro'" class="ion-float-left">{{item?.name | slice:0:13}}<span
+                                    *ngIf="item?.name.length >= 13" class="ion-float-right">...</span></h2>
+                        </ion-col>
+                    </ion-row>
+                    <ion-text>{{item?.address | slice:0:50}}<span *ngIf="item?.address.length > 50">...</span>
+                    </ion-text><br>
+                    <ion-text class="address2">{{'serviceAt.title' | translate}} - <span
+                            *ngIf="item?.give_service == 'Both'">{{'serviceAt.homeSalon' | translate}}</span> <span
+                            *ngIf="item?.give_service !== 'Both'">{{item?.give_service}}</span></ion-text>
+                    <div class="info">
+                        <div class="near_flex ion-float-left">
+                            <ion-icon name="star" class="star">{{item.rate}}</ion-icon>
+                            <span style="color: var(--star-color);" class="star">{{item.rate}}</span>
+                            <ion-text *ngIf="item?.available_now == 1">
+                                {{item?.time}} </ion-text>
+                            <ion-text class="text_color" *ngIf="item?.available_now == 0">
+                                {{'salonProfile.close' |
+                                translate}}
+                            </ion-text>
+                        </div>
+
+                        <span class="ion-float-right" *ngIf="language == 'en'"><img src="../../../assets/location.png">
+                            {{item.distance}}Km</span>
+                        <span class="ion-float-right" *ngIf="language == 'ro'"><img src="../../../assets/location.png">
+                            {{item.distance}}Km</span>
+                        <span class="ion-float-left" *ngIf="language == 'ar'"><img src="../../../assets/location.png">
+                            {{item.distance}}Km</span>
+                    </div>
+                    <ion-button *ngIf="language == 'en'" class="right" (click)="book(item?.salon_id)" fill="clear">
+                        {{'NearBy.Book' | translate}}</ion-button>
+                    <ion-button *ngIf="language == 'ro'" class="right" (click)="book(item?.salon_id)" fill="clear">
+                        {{'NearBy.Book' | translate}}</ion-button>
+                    <ion-button *ngIf="language == 'ar'" class="left" (click)="book(item?.salon_id)" fill="clear">
+                        {{'NearBy.Book' | translate}}</ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
