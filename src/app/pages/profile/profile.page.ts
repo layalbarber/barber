@@ -4,12 +4,14 @@ import {
   ModalController,
   Platform,
   MenuController,
+  AlertController,
 } from "@ionic/angular";
 import { UtilserviceService } from "src/app/services/utilservice.service";
 import { ApiService } from "src/app/services/api.service";
 import { LoginPage } from "../login/login.page";
 import { Network } from "@ionic-native/network/ngx";
 import { TranslateService } from "@ngx-translate/core";
+import { ok } from "assert";
 @Component({
   selector: "app-profile",
   templateUrl: "./profile.page.html",
@@ -41,6 +43,7 @@ export class ProfilePage implements OnInit {
     private api: ApiService,
     private modalCtrl: ModalController,
     private platform: Platform,
+    private alertCtrl: AlertController,
     private netWork: Network,
     private menuController: MenuController,
     private translate: TranslateService
@@ -206,5 +209,30 @@ export class ProfilePage implements OnInit {
 
   editprofile() {
     this.navCtrl.navigateForward("tabs/profile/edit");
+  }
+  deleteMyAccount(){
+    this.alertCtrl.create({
+      header:'Delete Account',
+      message: 'this process will take 48 hours to complete',
+      backdropDismiss: true,
+      buttons: [{
+        text: 'cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Application exit prevented!');
+        }
+      }, {
+        text:'ok',
+        handler: () => {
+          localStorage.removeItem('token');
+ 
+  this.navCtrl.navigateRoot(['login']);
+        }
+      }]
+    })
+      .then(alert => {
+        alert.present();
+      });
+ 
   }
 }
