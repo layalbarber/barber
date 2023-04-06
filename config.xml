@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="app.salunatuae.app" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>The Barber</name>
-    <description>The Barber Salon user</description>
+<widget id="com.mybarberapp.owner" version="0.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Salonat UAE</name>
+    <description>Salonat UAE user</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -19,7 +19,7 @@
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
-    <preference name="android-minSdkVersion" value="31" />
+    <preference name="android-minSdkVersion" value="22" />
     <preference name="android-targetSdkVersion" value="32" />
     <preference name="android-compileSdkVersion" value="32" />
     <preference name="loadUrlTimeoutValue" value="60000" />
@@ -253,7 +253,6 @@
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <allow-navigation href="http://localhost:8101" sessionid="9426031e" />
     <allow-navigation href="http://localhost:8100" sessionid="a454959e" />
